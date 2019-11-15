@@ -1,0 +1,128 @@
+
+.clear{
+	clear: both;
+}
+
+.supllayDemand .chartsPart h5{
+	font-size: 17px;
+	color: #403e5b;
+	display: inline;
+	vertical-align: middle;
+}
+.supllayDemand .chartsPart .rakingMakes{
+	float: right;
+	width: 36%;
+	margin-right: 2%;
+} 
+.supllayDemand .chartsPart .rakingMakes button{
+	padding: 2% 11%;
+	background: white;
+	border: solid 1px #403e5b;
+	outline: none;
+	border-radius: 2px;
+}
+.supllayDemand .chartsPart .rakingMakes img:nth-child(2){
+	padding: 0 10px;
+}
+.supllayDemand .chartsPart .rakingMakes button a{
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+	text-decoration: none;
+}
+.supllayDemand table{
+	width: 90%;
+}
+.supllayDemand table tr td{
+	border-top: none;
+	border-bottom: 1px solid #ddd!important;
+	padding: 4.9% 0;
+	opacity: 0.9;
+}
+.supllayDemand .tableLeft{
+	margin-left: 9%;
+}
+.variantDiv, .charts{
+	margin-top: 0!important;
+}
+.variantDiv .chartsPart:nth-child(1) {
+	padding-right: 0!important;
+}
+.compairSupplyDemand .selectedVariant select{
+	width: 94%;
+}
+.compairSupplyDemand .selectedVariant button{
+	width: 94%;
+    margin: 0 auto;
+    display: block;
+}
+.variantDiv .chartsPart:nth-child(2) {
+	padding-left: 0!important;
+}
+.compairSupplyDemand .chartsPart .detailsCompair{
+	margin-left: 0!important;
+}
+.compairSupplyDemand .addCar{
+	padding-top: 4.4%;
+}
+.compairSupplyDemand table tr td{
+	opacity: 0.9;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.supllayDemand .chartsPart .rakingMakes{
+		width: 42%;
+	    margin-top: -1%;
+	}
+	.supllayDemand .chartsPart .rakingMakes img:nth-child(2){
+		padding: 0;
+	}
+	.charts:nth-child(2) .chartsPart h4{
+		font-size: 16px!important;
+	}
+	.variantDiv  .chartsPart{
+		padding: 5.4% 3%!important;
+	}
+	.variantDiv .chartsPart:nth-child(2) {
+		padding-left: 3%!important;
+	}
+	.addCar .selectedVariant{
+		margin-top: 26.5%;
+	}
+	.selectedVariant select{
+		padding-left: 58%!important;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.supllayDemand .chartsPart .rakingMakes{
+		width: 38%;
+	    margin-top: -1%;
+	}
+	.supllayDemand .chartsPart .rakingMakes img:nth-child(2){
+		padding: 0;
+	}
+	.charts:nth-child(2) .chartsPart h4{
+		font-size: 16px!important;
+	}
+	.variantDiv  .chartsPart{
+		padding: 5.4% 3%!important;
+	}
+	.variantDiv .chartsPart:nth-child(2) {
+		padding-left: 3%!important;
+	}
+	.variantDiv .chartsPart:nth-child(1) {
+		padding-right: 3%!important;
+	}
+	.addCar .selectedVariant{
+		margin-top: 24%!important;
+	}
+
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.supllayDemand .chartsPart .rakingMakes{
+		width: 28%;
+	}
+	.addCar .selectedVariant{
+		margin-top: 10%!important;
+	}
+}

@@ -1,0 +1,1003 @@
+body{
+	font-family: "AvenirNextLTProMedium";
+	position: relative;
+}
+.navbar-brand{
+	padding-top: 5px!important;
+}
+.closeButton{
+	margin-top: -7px;
+}
+
+.empaty-xl{
+	max-height: 1px;
+	min-height: 1px;
+	overflow: hidden;
+	margin: 6% 0;
+}
+
+.empaty-large{
+	max-height: 1px;
+	min-height: 1px;
+	overflow: hidden;
+	margin: 16px 0;
+}
+
+.empaty-medium{
+	max-height: 1px;
+	min-height: 1px;
+	overflow: hidden;
+	margin: 8px 0;
+}
+
+.empaty-small{
+	max-height: 1px;
+	min-height: 1px;
+	overflow: hidden;
+	margin: 4px 0;
+}
+
+.backToTop{
+	position: fixed;
+	bottom: 6%;
+	right: 3%;
+	border:1px solid #32343d;
+	background: white;
+	display: none;
+	z-index: 999;
+}
+.backToTop:hover{
+	background:  #119a4f;
+}
+.backToTop:hover  i{
+	color: white!important;
+}
+.activeMenu{
+	opacity: 0.5;
+}
+
+#myNavbar ul li{
+	margin-right: 3px;
+}
+#myNavbar ul li a{
+	color: #403e5b;
+	padding: 7px 15px;
+	font-size: 17px;
+	font-family:  "AvenirNextLTProRegular";
+}
+
+#myNavbar ul li:hover a, #myNavbar ul li:active a, #myNavbar ul li:focus a, #myNavbar ul li:visited a{
+	border-radius: 4px;
+}
+
+.navBar{
+	background-image: url(../img/Backgrounds/topBg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: top;
+	position: relative;
+  	margin-bottom: 3%;
+}
+
+.navbar-toggle{
+	margin-top: 1%;
+}
+
+.navbar-toggle span{
+	background-color: #403e5b;
+}
+
+.navBar h1{
+	font-size: 50px;
+	font-family: "AvenirNextLTProBold";
+	letter-spacing: -1px;
+	color: #26272e;
+}
+
+.navBar h3{
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 1.4;
+	letter-spacing: -0.5px;
+	color: #403e5b;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: inherit;
+	opacity: 0.5;
+}
+.regShow{
+	border: 1px solid #119a4f!important;
+	border-radius: 4px;
+	color: #119a4f!important;
+}
+.access{
+	margin: 0  auto 55% auto;
+	width: 57%;
+}
+
+.access button{
+	font-size: 14px;
+	color: #ffffff;
+	border-radius: 4px;
+	background:  #403e5b;
+	border:none;
+}
+.access button:nth-child(1){
+	padding: 11.6px 55px;
+	margin-right: 20px;
+	letter-spacing: 1px;
+}
+.access button:nth-child(2){
+	padding: 11.6px 45px;
+	letter-spacing: 1px;
+}
+.activeAccess{
+	background-color:#119a4f!important;
+	color: #ffffff!important;
+	outline: none!important;
+	border: none!important;
+}
+.btn-default:hover{
+	background-color:#119a4f!important;
+	color: #ffffff!important;
+	outline: none!important;
+}
+.features h3{
+	font-size: 30px;
+	font-family: "AvenirNextLTProBold";
+	color: #32343d;
+	margin-top: 14%!important;
+}
+
+.features h4, .ourPlans h4{
+	font-size: 17px;
+	color: #32343d;
+	font-family: 'AvenirNextLTProRegular';
+	line-height: 1.5;
+}
+
+.features p{
+	font-size: 17px;
+	color: #32343d;
+	font-family: 'AvenirNextLTProRegular';
+}
+
+.features .container:nth-child(1){
+	border-bottom: 1px solid #cccccc;
+}
+
+.mainButton, .ourPlans .mainButton{
+	margin: 0 auto;
+	display: block;
+	width: 26.7%;
+	font-size: 14px;
+	font-weight: 500;
+	color:  #119a4f;
+	padding: 11px 0;
+	background: white;
+	border-color:  #119a4f;
+}
+
+    
+.text{
+	font-family: 'AvenirNextLTProRegular';
+}
+.slideShow{
+	background-image: url(../img/Backgrounds/Clientsbg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: top;
+}
+
+.carousel-indicators{
+	margin-bottom: 8%;
+} 
+
+.slideShow h2{
+	font-family: 'AvenirNextLTProBold';
+	color: #ffffff;
+}
+
+
+.slideShow h3{
+	font-size: 20px;
+	font-weight: 500;
+	color: #ffffff;
+}
+
+.slideShow img{
+	margin: 0 auto;
+}
+
+.slideShow h4{
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.slideShow p{
+	font-size: 16px;
+	color: #ffffff;
+}
+.payPer, .annualSubscribe{
+/* 	background-color: white;
+	 */	width: 260px;	
+	border-radius: 4px;
+}
+
+.ourPlans .container .row .row>div:nth-child(1), .annualSubscribe, .payPer{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+	padding: 0;
+}
+
+.ourPlans h1{
+	font-family: 'AvenirNextLTProBold';
+	color:  #403e5b;
+	text-align: center;
+	font-size: 32px;
+}
+
+.ourPlans h3{
+	font-size: 20px;
+	font-weight: 500;
+	color:#403e5b;
+	text-align: center;
+	padding: 0 8%;
+	font-family: 'AvenirNextLTProRegular';
+}
+
+.ourPlans h2{
+	font-size: 30px;
+	font-family: 'AvenirNextLTProBold';
+	color:#403e5b;
+	text-align: center;
+}
+.ourPlans h2 span{
+	font-size: 20px;
+	font-family: 'AvenirNextLTProBold';
+	color:#403e5b;
+	text-align: center;
+}
+
+.ourPlans p{
+	font-size: 16px;
+	text-align: center;
+	color:#403e5b;
+	padding: 0 8%;
+	font-family: 'AvenirNextLTProRegular';
+}
+
+.ourPlans button{
+	border: solid 1px #009c63;
+	background: white;
+	display: block;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: 'AvenirNextLTProRegular'!important;
+	color:#009c63;
+	padding: 13px 48px;
+	letter-spacing: 2px;
+}
+ .ourPlans .container:nth-child(1){
+	border-bottom: solid 1px #cccccc;
+}
+.ourPlans button:hover,.ourPlans button:active,.ourPlans button:visited, .ourPlans button:focus{
+	background-color: #119a4f!important	;
+	color: white!important;
+ 	border: solid 1px white!important;
+ }
+.popUp .mainButton{
+	width: 37.7%!important;
+}
+.activePayAnnual{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+	background-color: #119a4f;
+	border-radius: 4px;
+	padding: 0;	
+	cursor: pointer;
+}
+.activePayAnnual h3 , .activePayAnnual h2, .activePayAnnual p{
+	color: white!important;
+}
+.activePayAnnual h2 span{
+	color: white!important;
+}
+.activePayAnnual button{
+	border: solid 1px #ffffff;
+	background: #119a4f;
+	font-size: 14px;
+	font-weight: 500;
+	color: #ffffff;
+}
+.popUp{
+	width: 640px;
+}
+.popUp hr{
+	border: 1.5px solid #eee;
+}
+.payPer{
+	margin-left: 8%;
+}
+.ourPlans button span{
+	font-size: 66px!important;
+	
+}
+
+
+.close{
+	opacity: .5!important;
+}
+
+.payPer:hover {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+	background-color: #119a4f;
+	border-radius: 4px;
+	padding: 0;	
+	cursor: pointer;
+}
+.payPer:hover  h3, .payPer:hover h2, .payPer:hover p{
+	color: white;
+}
+.payPer:hover h2 span{
+	color: white;
+}
+.annualSubscribe:hover h2 span{
+	color: white;
+}
+.payPer:hover button{
+	border: solid 1px #ffffff;
+	background: #119a4f;
+	font-weight: 500;
+	color: #ffffff;
+}
+.annualSubscribe{
+	margin-left: 20px;
+}
+.annualSubscribe:hover {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+	background-color: #119a4f;
+	border-radius: 4px;
+	padding: 0;
+	cursor: pointer;
+}
+.annualSubscribe:hover h3, .annualSubscribe:hover h2, .annualSubscribe:hover p{
+	color: white;
+} 
+.annualSubscribe:hover button{
+	border: solid 1px #ffffff;
+	background: #119a4f;
+	font-weight: 500;
+	color: #ffffff;
+} 
+.demoVersion h3{
+	font-family: 'AvenirNextLTProRegular';
+}
+
+.makeDecisions{
+	background-color:#403e5b;
+}
+
+.makeDecisions h2{
+	color: #F8F8F8;
+	text-align: center;
+	font-family:'AvenirNextLTProMedium';
+
+}
+
+
+.makeDecisions p{
+	font-size: 13px;
+	text-align: left;
+	color: #F8F8F8;
+	font-family: 'AvenirNextLTProRegular';
+}
+
+.makeDecisions ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.makeDecisions ul li{
+	margin-bottom: 10px;
+}
+.makeDecisions ul li a{
+	color:#F8F8F8;
+	font-size: 15px;
+	font-family: 'AvenirNextLTProRegular';
+	line-height: 2.13;
+
+}
+.makeDecisions input{
+	width: 33.3333333%;
+	background-color: inherit;
+	padding: 23px;
+	color: #F8F8F8;
+}
+
+.makeDecisions input:nth-child(1){
+	border-radius: 4px 0 0 0;
+}
+
+.makeDecisions input:nth-child(2){
+	border-radius: 0;
+}
+
+::-webkit-input-placeholder{
+	color: #F0F0F1!important;
+	font-size: 15px;
+	font-family: 'AvenirNextLTProRegular';
+
+}
+
+.makeDecisions input:nth-child(3){
+	border-radius: 0  4px 0 0;
+}
+
+.makeDecisions textarea{
+	background: #403e5b!important;
+	border-radius: 0 0 4px 4px;
+}
+
+.message{
+	margin-top: -2%;
+	position: relative;
+}
+
+.message div{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #119a4f;
+	position: absolute;
+	top: 71%;
+	left: 80%;
+}
+
+.message div>img{
+	margin: 30% auto;
+	display: block;
+}
+
+.copy-right p{
+	font-size: 14px;
+	font-family: 'AvenirNextLTProRegular';
+
+}
+
+.conditions p a{
+	font-size: 14px;
+	font-family: 'AvenirNextLTProRegular';
+	color: #F0F0F1!important;
+}
+.conditions p{
+	float: right;
+}
+.mobileButton{
+	display: none;
+	position: absolute;
+	border: 1px solid #403e5b;
+	border-radius: 4px;
+	padding: 7px 17px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.25;
+	color: #32343d;
+	top: 48px;
+	left: 72%;
+	background-color: inherit;
+}
+ 
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.access{
+		width: 45%;
+	}
+	.search{
+		width: 30%;
+		margin-right: 2%;
+	}
+	.search input{
+		width: 100%!important;
+	} 
+	.mail{
+		width: 30%;
+		margin-right: 2%;
+	}
+	.mail input{
+		width: 100%!important;
+	} 
+	form button{
+		width: 30%;
+		padding: 10px 37px!important;
+	}
+	.features h4{
+		text-align: center;
+	} 
+	.features figure img{
+		margin: 0 auto;
+		display: block;
+	}
+	.clientImg{
+		margin-bottom: 16%!important;
+	}
+	.container-fluid{
+		padding-left: 4px!important;
+	} 
+	.ourPlans h3{
+		padding: 0 14%;
+	}
+	.container {
+    	width: 970px;
+	}
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+	#myNavbar ul li{
+		margin-right: 0;
+	}
+	/* .navbar-collapse{
+		padding-right: 0;
+	} */
+	#myNavbar ul li a{
+		padding: 7px 23px;
+	}
+	.access{
+		width: 61%;
+	}
+	.search{
+		width: 100%;
+		margin-right: 0%!important;
+		margin: 3% auto;
+	}
+	.search input{
+		width: 100%!important;
+	} 
+	.mail{
+		width: 100%;
+		margin-right: 0%!important;
+		margin: 15px auto;
+	}
+	.mail input{
+		width: 100%!important;
+	} 
+	form button{
+		width: 100%!important;
+		margin: 15px auto!important;
+
+	}
+	.search i, .mail i{
+		left: 90%;
+	}
+	.clientImg{
+		margin-bottom: 20%!important;
+	}
+	
+	.message input{
+		width: 100%;
+	}
+	.mainButton, .ourPlans .mainButton{
+		width: 315px;
+	}
+	
+	/* .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+		margin-left: 0!important;
+	} */
+	.message div{
+		left: 74%;
+	}
+	.features figure img{
+		margin: 0 auto;
+		display: block;
+
+	}
+	.features h4{
+		text-align: center;
+	}
+
+	.container {
+    	width: 736px;
+	}
+}
+@media (min-width: 700px) and (max-width: 767px){
+	.payPer{
+		margin-left: 13%!important;
+	}
+	.annualSubscribe{
+		margin-top: 0!important;
+		margin-left: 20px!important;
+	}
+}
+@media (min-width: 622px) and (max-width: 699px){
+	.payPer{
+		margin-left: 4%!important;
+	}
+	.annualSubscribe{
+		margin-top: 0!important;
+		margin-left: 20px!important;
+	}
+}
+@media (min-width: 561px) and (max-width: 767px){
+	
+	#myNavbar ul li{
+		margin-bottom: 11%;
+		text-align: center;
+	}
+	
+	.access{
+		width: 79%;
+	}
+	.access button{
+		width: 100%;
+	}
+	.access button:nth-child(1){
+		margin-bottom: 15px;
+	}
+	.mobileButton{
+		display: block;
+	    top: 48px;
+	    left: 67%;
+	}
+	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.navbar-collapse{
+		padding-left: 0;
+	}
+	.navbar-nav{
+		margin: 0 auto;
+		float: none!important;
+		width: 40%;
+	}
+	.annualSubscribe{
+		margin-left: 25%;
+		margin-top: 15px;
+	}
+	.clientImg{
+		margin-bottom: 38%!important;
+	}
+	.search i, .mail i{
+    	top: 19%;
+    	left: 90%;
+	}
+	.lightLogo{
+		display: none!important;
+	}
+	form button{
+		width: 100%;
+	}
+	.mainButton, .ourPlans .mainButton{
+		width: 100%;
+		font-size: 14px;
+	}
+	
+	
+	.features p{
+		font-size: 12px;
+	}
+	.features h4{
+		font-size: 16px;
+	}
+	.message input{
+		width: 100%;
+	}
+	.makeDecisions .row{
+		margin-bottom: 5%;
+	}
+	.ourPlans h3{
+		font-size: 15px;
+	}
+	.features figure img{
+		margin: 0 auto;
+		display: block;
+
+	}
+	.features h4{
+		text-align: center;
+	}
+	#myNavbar ul li a{
+		font-family: 'AvenirNextLTProMedium';
+		font-size: 26px;
+	}	
+	#myNavbar ul li a:hover{
+		color: #119a4f;
+		font-size: 26px;
+		font-family: 'AvenirNextLTProMedium';
+		border-color: #F3F3F4;
+	}
+	.navbar-collapse{
+		padding-right: 0!important;
+	}
+	#myNavbar ul li a{
+		color: #403e5b;
+		padding: 7px 30px;
+		border-top:none!important;	
+		border-left:none!important;	
+		border-right:none!important;	
+	}
+
+	#myNavbar ul li:hover a, #myNavbar ul li:active a, #myNavbar ul li:focus a, #myNavbar ul li:visited a{
+		border-radius: 4px;
+		border: none!important;
+	}
+	.plans{
+		border-bottom: 1px solid  rgba(64, 62, 91, 0.25)!important;
+		padding-bottom: 13%!important;
+	}
+
+}
+@media (min-width: 481px) and (max-width: 560px){
+	
+	#myNavbar ul li{
+		margin-bottom: 11%;
+		text-align: center;
+	}
+	.plans{
+		border-bottom: 1px solid  rgba(64, 62, 91, 0.25)!important;
+		padding-bottom: 13%!important;
+	}
+	.mobileButton{
+		display: block;
+		top: 48px;
+    	left: 273px;
+	}
+	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.access{
+		width: 79%;
+	}
+	.access button{
+		width: 100%;
+	}
+	.access button:nth-child(1){
+		margin-bottom: 15px;
+	}
+	.navbar-collapse{
+		padding-left: 0;
+	}
+	.navbar-nav{
+		margin: 0 auto;
+		float: none!important;
+		width: 45%;
+	}
+	.clientImg{
+	margin-bottom: 60%!important;
+	}
+	.lightLogo{
+		display: none!important;
+	}
+	.search i, .mail i{
+		top: 19%;
+    	left: 89%;
+	}
+	form button{
+		width: 100%;
+	}
+	.mainButton, .ourPlans .mainButton{
+		width: 100%;
+	}
+	.annualSubscribe{
+		margin-top: 5%;
+	}
+	.features p{
+		font-size: 12px;
+	}
+	.features h4{
+		font-size: 16px;
+	}
+	.message input{
+		width: 100%;
+	}
+	.makeDecisions .row{
+		margin-bottom: 5%;
+	}
+	
+	.ourPlans button{
+		padding: 13px;
+	}
+	.ourPlans p{
+		padding: 0 12%;
+	}
+	.ourPlans h3{
+		font-size: 15px;
+	}
+	.features figure img{
+		margin: 0 auto;
+		display: block;
+
+	}
+	.features h4{
+		text-align: center;
+	}
+	.ourPlans .col-xs-6 {
+    	float: none!important;
+    	margin: 0 auto;
+	}
+	#myNavbar ul li a:hover{
+		color: #119a4f;
+		font-size: 26px;
+		font-family: 'AvenirNextLTProMedium';
+		border-color: #F3F3F4;
+	}
+	#myNavbar ul li a{
+		font-family: 'AvenirNextLTProMedium';
+		font-size: 26px;
+	}
+	.navbar-collapse{
+		padding-right: 0!important;
+	}
+	#myNavbar ul li a{
+		color: #403e5b;
+		padding: 7px 30px;
+		border-top:none!important;	
+		border-left:none!important;	
+		border-right:none!important;		
+	}
+
+	#myNavbar ul li:hover a, #myNavbar ul li:active a, #myNavbar ul li:focus a, #myNavbar ul li:visited a{
+		border-radius: 4px;
+		border: none!important;
+	}	
+}
+
+@media (min-width: 400px) and (max-width: 480px){
+	.clientImg{
+		margin-bottom: 82%!important;
+	}
+}
+@media (min-width: 370px) and (max-width: 399px){
+	.clientImg{
+		margin-bottom: 102%!important;
+	}
+
+}
+@media (min-width: 320px) and (max-width: 369px){
+	.clientImg{
+		margin-bottom: 147%!important;
+	}
+	
+}
+@media (min-width: 320px) and (max-width: 480px){
+	
+	#myNavbar ul li{
+		margin-bottom: 11%;
+		text-align: center;
+	}
+	.plans{
+		border-bottom: 1px solid  rgba(64, 62, 91, 0.25)!important;
+		padding-bottom: 13%!important;
+	}
+	.navbar-nav{
+		margin:0 auto;
+		float: none!important;
+		width: 60%;
+	}
+	.mobileButton{
+		display: block;
+		top:68px;
+    	left: 50%;
+	}
+	.access{
+		width: 79%;
+	}
+	.access button{
+		width: 100%;
+	}
+	.access button:nth-child(1){
+		margin-bottom: 15px;
+	}
+	.navbar-toggle{
+		margin-top: 26px;
+		margin-right: -4%;
+	}
+	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.navbar-collapse{
+		padding-left: 0;
+	}
+
+	.lightLogo{
+		display: none!important;
+	}
+	form button{
+		width: 100%;
+	}
+	.mainButton, .ourPlans .mainButton{
+		width: 100%;
+	}
+	.annualSubscribe{
+		margin-top: 5%;
+	}
+	.features p{
+		font-size: 12px;
+	}
+	.features h4{
+		font-size: 16px;
+	}
+	.message input{
+		width: 100%;
+	}
+	.makeDecisions .row{
+		margin-bottom: 5%;
+	}
+	
+	.ourPlans button{
+		padding: 13px;
+	}
+	.search i, .mail i{
+		top: 19%;
+    	left: 84%;
+	}
+	.ourPlans h3{
+		font-size: 15px;
+	}
+	.features figure img{
+		margin: 0 auto;
+		display: block;
+
+	}
+	.features h4{
+		text-align: center;
+	}
+	.ourPlans .col-xs-6{
+		float: none!important;
+		margin: 0 auto;
+	}
+	#myNavbar ul li a:hover{
+		color: #119a4f;
+		font-size: 26px;
+		font-family: 'AvenirNextLTProMedium';
+		border-color: #F3F3F4;
+	}
+	#myNavbar ul li a{
+		font-family: 'AvenirNextLTProMedium';
+		font-size: 26px;
+	}
+	.navbar-brand{
+		margin-top: 20px;
+	}
+	.navbar-collapse{
+		padding-right: 0!important;
+	}
+	#myNavbar ul li a{
+		color: #403e5b;
+		padding: 7px 30px;
+		border-top:none!important;	
+		border-left:none!important;	
+		border-right:none!important;	
+	}
+
+	#myNavbar ul li:hover a, #myNavbar ul li:active a, #myNavbar ul li:focus a, #myNavbar ul li:visited a{
+		border-radius: 4px;
+		border: none!important;
+	}		
+}
+
+
+@font-face{
+	font-family: 'AvenirNextLTProRegular';
+	src: url(../AvenirNextLTProRegular.otf);
+}
+@font-face{
+ 	font-family: 'AvenirNextLTProMedium';
+ 	src: url(../AvenirNextLTProMedium.otf);
+} 
+@font-face{
+ 	font-family: 'AvenirNextLTProBold';
+ 	src: url(../AvenirNextLTProBold.otf);
+}

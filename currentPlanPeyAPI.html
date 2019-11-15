@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Curent Plan Pey API</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main_test.css">
+		<link rel="stylesheet" href="css/charts.css">
+		<link rel="stylesheet" href="css/profile.css">
+		<link rel="stylesheet" href="css/profile_s.css">
+		<link rel="stylesheet" href="css/currentPlan.css">
+		<link rel="stylesheet" href="css/paymentConf.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<!--  AngularJs -->
+		<!-- <script src="js/angular.min.js"></script> -->
+    	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+
+		
+		
+</head>
+<body ng-app="myModule">
+		<div class="conatiner-fluid navBarCharts">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+			<div class="row">
+				<nav class="navbar">
+				  	<div class="container-fluid">
+				    	<div class="navbar-header">
+						   <!--  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						       <span class="icon-bar"></span>
+						       <span class="icon-bar"></span>
+						       <span class="icon-bar"></span> 
+						   </button> -->
+				      		<a class="navbar-brand" href="index.html"><img src="img/iCarDataDark.png" alt=""></a>
+				    	</div>
+				    	<div class="navbar-collapse pull-right" id="myNavbar">
+<div class="empaty-small"></div>
+						    <ul class="nav navbar-nav pull-right">
+						        <li><a href="#">Get Apps</a></li>
+						        <li>
+							        <!-- Large modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Buy Plans</button>
+								</li>
+<!-- modal window -->
+<div class="modal fade bs-example-modal-lg modalWindow" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg popUp" role="document">
+    <div class="modal-content ourPlans">
+      	<div class="modal-header">
+<!-- <div class="empaty-large"></div> -->
+			 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<div class="row">
+<div class="empaty-medium"></div>
+<!-- <div class="empaty-large"></div> -->
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md -offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+					<h1 class="text-center">Our Plans</h1>
+					<h4 class="text-center">Choose what suits your business needs best.</h4>
+<div class="clear"></div>
+				</div>
+<div class="clear"></div>
+			</div>
+<div class="clear"></div>
+        </div>
+        <div class="modal-body">		
+<!-- <div class="empaty-large"></div>
+<div class="empaty-large"></div> -->
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="row"> 
+						<div class="col-md-4 col-sm-4 col-xs-6  payPer">
+<div class="empaty-large"></div>
+							<h3>Pay per API Call</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$100<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Pay on demand when you make request to our API</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+						<div class="col-md-4  col-sm-4 col-xs-6   annualSubscribe">
+<div class="empaty-large"></div>
+							<h3>Annual Subscription</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$200<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Make as many API requests as you want without limits</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+<div class="empaty-large"></div>
+
+		</div>
+		<hr>	
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h4 class="text-center">
+						We work with Banks, Insurance Companies, Manufacturers, Press, Investors  providing them with actionable information that changes the way they do business.
+					</h4>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+					<button type="button" class="btn btn-default mainButton">TRY DEMO VERSION</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+						        <li><a href="#">Feedback</a></li> 
+						        <li><a href="#">Need Help?</a></li> 
+						        <li><a href="#" style="padding-right: 0;padding-top: 0!important"><img src="img/Functional/UserImage.png" alt="user img"> </a> </li> 
+						        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Sttau</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu profileInfo">
+  	<div class="arrow"></div>
+    <li><a href="profile.html">My Profile</a></li>
+    <li><a href="choosePlan.html">Choose Plan</a></li>
+    <li><a href="currentPlan.html">Payment Method</a></li>
+    <li><a href="#">Log Out</a></li>
+  </ul>
+</div>
+						    </ul>
+				    	</div>				     
+				  	</div>
+				</nav>
+			</div>
+<div class="empaty-large hidden-sm"></div>
+<div class="empaty-large hidden-sm"></div>
+<div class="empaty-small hidden-sm"></div>
+
+		</div>
+	</div>
+<div class="empaty-large"></div>
+<div class="empaty-small"></div> 
+	
+<div class="container-fluid profileSidebar">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-3">
+				<div class="backDashboard">
+					<figure>
+						<img src="img\Functional/leftArrow.png" alt="">
+					</figure>
+					<p class="text-center"><a href="charts.html">Back to Dashboard</a></p>
+<div class="clear"></div>
+				</div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div>
+					<ul>
+						<li>
+							<figure>
+								<img src="img\Icons\Profile/myprofile1.png" alt="">
+							</figure>
+							<h4><a  href="profile.html">My Profile</a></h4>
+						</li>
+<div class="clear"></div>
+<div class="empaty-medium"></div>
+
+						<li>
+							<figure>
+								<img id="choseIcon1" src="img\Icons\Profile/chosenplan1.png" alt="">
+							</figure>
+							<h4><a id="dashboardchoose"  href="choosePlan.html">Choose Plan</a></h4>
+						</li>
+<div class="clear"></div>
+<div class="empaty-medium"></div>
+
+						<li>
+							<figure>
+								<img id="payIcon1" src="img\Icons\Profile/payment2.png" alt="">
+							</figure>
+							<h4><a id="dashboardPay" href="currentPlan.html" class="activeProfile">Payment Method</a></h4>
+						</li>
+<div class="clear"></div>
+					</ul>
+<div class="clear"></div>
+			</div>
+			<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-8 personalInformation">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left">
+						<h4>Subscription Information</h4>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">
+						<div class="editDetails pull-right">
+							<img src="img\Icons\Profile/question.png" alt="">
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="row backgroundImg">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="empaty-large"></div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<figure class="pull-left">
+								<img src="img/Functional/oval5.png" alt="">
+							</figure>
+<div class="empaty-small"></div>
+							<div class="borderDiv">
+								<h5>Pedro Sttau</h5>
+
+								<img src="img/Functional/photoCamera.png" alt=""> &nbsp <span> Change picture</span>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+<div class="empaty-small"></div>
+<div class="empaty-small"></div>
+							<div class="name">
+								<p>Chosen Plan:  Annual Subscription </p>
+								<p>Account Balance:  $450</p>
+							</div>				
+						</div>
+					</div>
+				</div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div>
+									<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 ourPlans">
+							<div class="annualSub profileSubscribe">
+								<div class="empaty-large"></div>
+									<h3>Pey Per API Call</h3>
+		<div class="empaty-medium"></div>						
+		<div class="empaty-small"></div>	
+									<h2>$100<span>/Mo</span></h2>	
+		<div class="empaty-medium"></div>						
+		<div class="empaty-small"></div>
+									<p>Pay on demand when you take request to our API</p>
+		<div class="empaty-large"></div>						
+		<div class="empaty-small"></div>
+									<button class="btn btn-default">TILL AUG 2018</button>
+								<div class="empaty-large"></div>
+							</div>
+					</div>
+					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 profileSubscription  pull-left">
+							<div>
+									<h4 class="text-left">Purchase Summary</h4>
+			<div class="empaty-medium"></div>			
+									<p >New Chosen Plan:  Pey Per API Call</p>
+			<div class="empaty-medium"></div>				
+									<p>New Expiration Date:  16th August 2018</p>
+			<div class="empaty-xl"></div>					
+			<div class="empaty-xl"></div>					
+			<div class="empaty-xl"></div>					
+			<div class="empaty-xl"></div>					
+			<div class="empaty-xl hidden-xs"></div>					
+			<div class="empaty-medium"></div>					
+
+									<div class="btns-newPlans currenPlanBack">
+										<div>
+											<figure>
+												<img src="img\Functional/leftArrow.png" alt="">
+											</figure>
+											<p class="text-left">
+											<a href="choosePlan.html">Back to Plans</a>
+											</p>
+											
+										</div>
+<div class="clear"></div>
+									</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+					</div>
+				</div>
+<hr class="border">
+				<div id="paymentMethodFrame" class="row">
+					<div class="choosePlan">
+<div class="empaty-large"></div>
+						<h2>Choose Suitable Payment Method</h2>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<div class="paymentFrame profileSubscribe">
+								<div class="payment profileSubscribe">
+									<figure class="text-center">
+										<img src="img/Functional/bankCards.png" alt="">
+									</figure>
+								</div >
+								<div class="payment profileSubscribe">
+									<figure class="text-center">
+										<img src="img/Functional/OnlineBanking.png" alt="">
+									</figure>
+								</div>
+								<div class="payment profileSubscribe">
+									<figure class="text-center">
+										<img src="img/Functional/PayPal.png" alt="">
+									</figure>
+								</div>
+<div class="empaty-large"></div>	
+<div class="empaty-large"></div>	
+<div class="clear"></div>						
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<div class="annualSubLarge profileSubscribe fillFormFrame">
+								<div class="fillForm">
+<div class="empaty-medium hidden-md hidden-sm"></div>
+<div class="empaty-small hidden-md hidden-sm"></div>
+									<h3>Please, fill the form below</h3>
+<div class="empaty-medium"></div>
+									<p>Card Number (20 digits)</p>
+<div class="empaty-small"></div>
+									<input type="text" value="1223 3671 2440 9914">
+<div class="empaty-medium"></div>
+									<p>Card Holder (Name on Card)</p>
+<div class="empaty-small"></div>
+									<input type="text" value="Pedro Sttau">
+<div class="empaty-medium"></div>
+									<div class="cardExpirCSV">
+										<div class="pull-left">
+											<p>Expire on (Month/Year)</p>
+											<input type="text" value="06/25">
+										</div>
+										<div class="pull-right">
+											<p class="CSV">CSV  (3 digit code)</p>
+											<input type="password" value="***">
+										</div>
+						
+										<div class="clear"></div>
+									</div>
+<div class="empaty-medium"></div>
+<div class="empaty-small"></div>
+									<p>Your card has been confirmed for payment! Pay now.</p>
+<div class="empaty-medium hidden-xs"></div>
+								</div>
+							</div>
+<div class="clear"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 pull-left paymentTerms">
+						<div class="empaty-large"></div>
+						<div class="empaty-medium"></div>
+								<span>*By clicking ‘Pay Now’ you agree to Terms of Service.</span>
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 pull-right btnDiv">
+						<div class="empaty-large"></div>
+						<div class="empaty-medium"></div>
+							<div class="pull-right">
+								<button id="btnPayNow" class="btn-right">PAY NOW</button>
+							</div>
+						</div>
+<div class="clear"></div>
+
+					</div>
+<div class="clear"></div>
+				</div>
+<div class="clear"></div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+	<div class="container-fluid makeDecisions">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+						<h2>Make smarter decisions today.</h2>
+					</div>
+				</div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  message">
+									<input type="name" class="form-control pull-left" id="exampleInputEmail3" placeholder="Name">
+									<input type="company" class="form-control pull-left" id="exampleInputEmail3" placeholder="Company">
+									<input type="email" class="form-control pull-left" id="exampleInputEmail3" placeholder="Email">
+									<textarea class="form-control" rows="5" placeholder="New Message"></textarea>
+									<div>
+										<img src="img/Functional/SendEmail.png" alt="sent message">
+									</div>
+								</div>
+<div class="clear"></div>
+							</div>
+						</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 lightLogo">
+								<a class="navbar-brand" href="#"><img src="img/iCarDataLight.png" alt="Logo Light" ></a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<p>FEATURES</p>
+								<ul>
+									<li><a href="#">Depreciation</a></li>
+									<li><a href="#">Supply&Demand</a>n</li>
+									<li><a href="#">Ranking</a></li>
+									<li><a href="#">Geolocation</a> </li>
+									<li><a href="#">Market Price</a> </li>
+								</ul>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<p>COMPANY</p>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Press Room</a></li>
+									<li><a href="#">Investor Relations</a></li>
+								</ul>
+							</div>
+<div class="clear"></div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>RESOURCES</p>
+								<ul>
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Personal Data Protection</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+<div class="clear"></div>
+						</div>
+					</div>					
+				</div>
+<div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 copy-right">
+						
+					</div>
+					<div class="col-lg-4 col-lg-offset-4 col-md-6  col-sm-6  col-xs-6  conditions">
+						<p ><a href="">Terms & Conditions·  Privacy Policy</a></p>
+					</div>
+<div class="clear"></div>
+				</div>
+<div class="empaty-large"></div>
+			</div>
+<div class="clear"></div>
+		</div>
+		
+
+
+	
+  <script src="js/script_search.js"></script> 
+ <script>
+			$(document).ready(function(){
+/*date and copy right*/
+		
+	   		var date=new Date(),
+	        year = date.getFullYear(),
+	       	text = "© " + year + " iCarData.com. All rights reserved.";
+	        
+	        $('.copy-right').html('<p class="text-align-left">' + text + '</p>');
+/*choose subscribe method*/
+
+			$('.payPer').on('click', function(){
+		    		$('.annualSubscribe.activePayAnnual').removeClass('activePayAnnual');
+		    		$(this).addClass('activePayAnnual');
+				});
+
+	        $('.annualSubscribe').on('click', function(){
+		    		$('.payPer.activePayAnnual').removeClass('activePayAnnual');
+		    		$(this).addClass('activePayAnnual');
+				});
+/*slide down animation*/
+	        $("#btnNewPlan").click(function () {
+	        	$("#choosePlanFrame").slideDown(1000);
+	        });
+
+	        $("#subscribeFrame").click(function () {
+	        	$("#paymentMethodFrame").slideDown(1000);
+	        	$("#activeFrame").removeClass("activePayAnnual");
+	        	$("#subscribeFrame").addClass("activePayAnnual");
+	        	$("#dashboardchoose").removeClass("activeProfile");
+	        	$("#dashboardPay").addClass("activeProfile");
+	        	$("#choseIcon2").css("display","none");
+	        	$("#choseIcon1").css("display","block");
+	        	$("#payIcon2").css("display","block");
+	        	$("#payIcon1").css("display","none");
+	        });
+	        $("#activeFrame").click(function () {
+	        	$("#paymentMethodFrame").slideDown(1000);
+	        	$("#subscribeFrame").removeClass("activePayAnnual");
+	        	$("#activeFrame").addClass("activePayAnnual");
+	        	$("#dashboardchoose").removeClass("activeProfile");
+	        	$("#dashboardPay").addClass("activeProfile");
+	        	$("#choseIcon2").css("display","none");
+	        	$("#choseIcon1").css("display","block");
+	        	$("#payIcon2").css("display","block");
+	        	$("#payIcon1").css("display","none");
+	        });
+	        $("#subscribeFrame").click(function () {
+	        	$("#activeFrame").removeClass("activePayAnnual");
+	        	$("#subscribeFrame").addClass("activePayAnnual");
+	        });
+	        $("#activeFrame").click(function () {
+	        	$("#subscribeFrame").removeClass("activePayAnnual");
+	        	$("#activeFrame").addClass("activePayAnnual");
+	        });
+
+})
+
+
+ </script>
+</body>
+</html>

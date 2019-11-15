@@ -1,0 +1,126 @@
+.clear{
+	clear: both;
+}
+.chartsPart{
+	margin-bottom: 0.7%!important;
+}
+.depFullScreen table tr th{
+	border: 1px solid white!important;
+	font-size: 13px;
+	color: #403e5b;
+	opacity: 0.8;
+	text-align: left;
+	font-family: 'AvenirNextLTProRegular';
+	width: 6%;
+	padding: 32px 0;
+}
+#detailsCompairDep{
+	margin-top: 2%;
+	margin-left: 0!important;
+}
+/* .supllayDemand table tr td{
+	opacity: 0.8!important;
+} */
+.backDashboard{
+	cursor: pointer;
+}
+.backDashboard figure{
+	display: inline;
+}
+.backDashboard p{
+	display: inline;
+}
+.detailsCompair img{
+	margin-top: -10%;
+}
+.detailsCompair i{
+	color: #403e5b!important;
+	opacity: 0.8;
+}
+.addCar h5{
+	opacity: 0.8;
+    margin-left: 14%;
+    color: #403e5b;
+}
+.first td{
+	font-size: 15px;
+	color: #403e5b;
+	opacity: 0.8;
+	font-family: 'AvenirNextLTProRegular';
+	text-align: center;
+}
+.activeRow td{
+	font-weight: 500;
+	color: #009c63;
+	font-family:'AvenirNextLTProMedium';
+	text-align: center;
+}
+.depFullScreen{
+	padding: 0 4%;
+}
+.depFullScreen table tr td{
+	padding: 14px 0!important;
+}
+.first td, .activeRow td{
+	text-align: left;
+}
+.depFullScreen table .fa-caret-down{
+	color: #ec6d5c!important;
+}
+.depFullScreen table .fa-caret-up{
+	color: #009c63!important;
+}
+.variables h5{
+	font-size: 15px;
+	color: #403e5b;
+
+}
+.variables h5{
+	margin-left: 0!important;
+}
+.variables{
+	display: none;
+	position: absolute;
+	background: white;
+	width: 41.5%;
+    top: 78%;
+    left: 51%;
+    z-index: 999;
+    padding:3% 2%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+}
+.variables div:nth-child(2) span:nth-child(4){
+	margin-left: 0!important;
+}
+
+.variables  div:nth-child(1),.variables  div:nth-child(2) {
+	width: 45%;
+}
+.variables hr{
+	border: solid 1px rgba(64, 62, 91, 0.25);
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+}
+
+@media (max-width: 1199px) and (min-width: 992px){
+	.table>tbody:first-child>tr>th {
+    	padding: 0px!important;
+	}
+	.depFullScreen table tr th{
+		width: 5%;
+	}
+	.addCar h5{
+		margin-left: 7%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	#detailsCompairDep{
+	    width: 92%!important;
+    	margin-top: 9%;
+	}
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.addCar h5{
+		margin-left: 25%!important;
+	}
+}

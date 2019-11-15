@@ -1,0 +1,35 @@
+.clear{
+	clear: both;
+}
+.currenPlanBack div figure{
+	display: inline;
+	float: left;
+	margin-top: 3%!important;
+}
+.btns-newPlans p{
+	display: inline;
+	float: right;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.btns-newPlans{
+		margin-top: 18%;
+	}
+	.payment{
+		width: 100%!important;
+		margin-bottom: 24.5%!important;
+	}
+	
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.payment{
+	    padding: 14.8% 0!important;
+	}
+	.backDashboard figure{
+		margin-left: 6%!important;
+	}
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.payment{
+	    padding: 10.2% 0!important;
+	}
+}

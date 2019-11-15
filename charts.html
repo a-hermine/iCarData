@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Charts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main_test.css">
+		<link rel="stylesheet" href="css/charts.css">
+		<link rel="stylesheet" href="css/chart_depreciation_variant_arrow.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		
+
+	<!--  AngularJs -->
+		<!-- <script src="js/angular.min.js"></script> -->
+    	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+		
+		
+
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+
+<script src="https://rawgithub.com/phpepe/highcharts-regression/master/highcharts-regression.js">
+
+
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,visualization&sensor=false"></script>
+	 <style>
+    * {
+    box-sizing: border-box;
+}
+
+.map-area {
+    width: 87%;
+    height: 280px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 2%;
+    margin-top: 5.2%;
+}
+
+.legend-area {
+    position: relative;
+    width: 280px;
+    height: 30px;
+    margin-top: 0px;
+    transform: rotate(90deg);
+    left: 39%;
+    top: -154px;
+    float: right;
+}
+
+.legendGradient-area {
+    width: 100%;
+    height: 15px;
+    border: 1px solid black;
+}
+    </style>
+	
+		
+</head>
+<body ng-app="myModule">
+		<div class="conatiner-fluid navBarCharts">
+			<div class="container">
+<div class="empaty-small"></div>
+			<div class="row">
+				<nav class="navbar">
+				  	<div class="container-fluid">
+				    	<div class="navbar-header">
+						    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span> 
+						    </button> -->
+				      		<a class="navbar-brand headLogo" href="index.html"><img src="img/iCarDataDark.png" alt=""></a>
+				    	</div>
+				    	<div class="navbar-collapse pull-right" id="myNavbar">
+<div class="empaty-small"></div>
+						    <ul class="nav navbar-nav pull-right">
+						        <li><a href="#">Get Apps</a></li>
+						        <li>
+							        <!-- Large modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Buy Plans</button>
+								</li>
+<!-- modal window -->
+<div class="modal fade bs-example-modal-lg modalWindow" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg popUp" role="document">
+    <div class="modal-content ourPlans">
+      	<div class="modal-header">
+<!-- <div class="empaty-large"></div> -->
+			 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<div class="row">
+<div class="empaty-medium"></div>
+<!-- <div class="empaty-large"></div> -->
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md -offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2" style= "margin-top: -10%">
+					<h1 class="text-center">Our Plans</h1>
+					<h4 class="text-center">Choose what suits your business needs best.</h4>
+<div class="clear"></div>
+				</div>
+<div class="clear"></div>
+			</div>
+<div class="clear"></div>
+        </div>
+        <div class="modal-body">		
+<!-- <div class="empaty-large"></div>
+<div class="empaty-large"></div> -->
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="row"> 
+						<div class="col-md-4 col-sm-4 col-xs-6  payPer">
+<div class="empaty-large"></div>
+							<h3>Pay per API Call</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$100<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Pay on demand when you make request to our API</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+						<div class="col-md-4  col-sm-4 col-xs-6   annualSubscribe">
+<div class="empaty-large"></div>
+							<h3>Annual Subscription</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$200<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Make as many API requests as you want without limits</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+<div class="empaty-large"></div>
+
+		</div>
+<div class="empaty-medium"></div>	
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h4 class="text-center">
+						We work with Banks, Insurance Companies, Manufacturers, Press, Investors  providing them with actionable information that changes the way they do business.
+					</h4>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+					<button type="button" class="btn btn-default mainButton">TRY DEMO VERSION</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+						        <li><a href="#">Feedback</a></li> 
+						        <li><a href="#">Need Help?</a></li> 
+						        <li><a href="#" style="padding-right: 0;padding-top: 0" class="userImage"><img src="img/Functional/UserImage.png" alt="user img" > </a> </li> 
+						        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Sttau</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+    <ul class="dropdown-menu profileInfo">
+  	<div class="arrow"></div>
+    <li><a href="profile.html">My Profile</a></li>
+    <li><a href="profile_s.html">Choose Plan</a></li>
+    <li><a href="profile_s.html">Payment Method</a></li>
+    <li><a href="#">Log Out</a></li>
+<div class="clear"></div>
+  </ul>
+</div>
+    </ul>
+				    	</div>				     
+				  	</div>
+				</nav>
+			</div>
+<div class="empaty-large hidden-xs "></div>			
+<div class="empaty-large hidden-xs "></div>
+<div class="empaty-small hidden-xs "></div>
+		</div>
+	</div>
+<div class="empaty-large hidden-xs "></div>
+<div class="empaty-medium hidden-xs "></div> 
+<div class="empaty-small hidden-xs "></div> 
+	<div class="container-fluid makeModel" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12">
+					<div class="searchModel">
+						<input type="text" id="search-criteria"  placeholder="Search reports" ng-model="searchText.name">
+						<i class="fa fa-search " aria-hidden="true"></i>
+					</div>
+<div class="empaty-large"></div>	
+					<div class="panel-group sideBar" id="accordion"   role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title homePage">
+									<figure>
+										<img src="img\Icons\Dashboard\Menu/home2.png" alt="home">
+									</figure> 
+							        <a role="button" class="chartsMenuActive" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Home
+							        </a>
+							    </h4>
+							</div>
+						</div>
+						  	<div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      	<h4 class="panel-title">
+							      		<figure>
+											<img src="img/menuIcons/depreciation.png" alt="Depreciation">
+										</figure> 
+							        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          		Depreciation
+							        	</a>
+							      	</h4>
+							    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      	<div class="panel-body">
+									<a href="chart_depreciation_model.html">- Depreciation by Model</a>
+<div class="empaty-small"></div>
+									<a href="chart_depreciation_variant.html">- Depreciation by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/supply&demand.png" alt="supply&demand">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          		Supply & Demand
+						        	</a>
+						      	</h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      	<div class="panel-body">
+									<a href="Dashboard_Supply&Demand.html">- Supply & Demand by Model</a>   
+<div class="empaty-small"></div>
+									<a href="Dashboard_Supply&Demand.html">- Supply & Demand by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title rankinPage">
+						      		<figure>
+										<img src="img\Icons\Dashboard\Menu/ranking1.png" alt="Raking">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Raking
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title geolocationPage">
+						      		<figure>
+										<img src="img/menuIcons/geolocation.png" alt="geolocation">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse"  aria-expanded="false">
+						          		Geolocation
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title marketPricePage">
+						      		<figure>
+										<img src="img/menuIcons/market price.png" alt="market price">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Market Price
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12">
+					<nav class="navbar" style="margin-bottom: 30px">
+					    <ul class="nav navbar-nav pull-right select-menu">
+					        <li class="makeLi activCarChoose"><a href="#">Make</a></li>
+					        <li class="modelLi disabled"><a href="#">Model</a></li>
+					        <li class="variantLi disabled"><a href="#">Variant</a></li> 
+					        <li class="yearLi disabled"><a href="#">Year</a> </li> 
+					        <li class="territoryLi disabled"><a href="#">Territory</a> </li> 
+					    </ul>
+					</nav>
+					<div class="row makeDiv">
+						<div class="col-lg-12 col-md-12">
+							<div class="make">
+								<input type="text" placeholder="Search make" class="pull-left" id="search-criteria-menu">
+								
+								<div class="clear"></div>
+								<i class="fa fa-search" aria-hidden="true"></i>
+								<ul></ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row selectedItems">
+						<div class="col-lg-12 col-md-12">
+							<div class="applied">
+								<p class="selectApplied">
+									<img src="img\Icons\Dashboard\Filter/selected.png" alt="">Applied:
+								</p>
+								<p class="car">
+									<img src="img\Icons\Dashboard\Filter/car.png" alt="">
+									<span class="spanMake"></span>
+									<span class="spanModel"></span>
+									<span class="spanVariant"></span>
+								</p>
+								<p class="year">
+									<img src="img\Icons\Dashboard\Filter/year.png" alt="">
+									<span></span>
+								</p>
+								<p class="territory">
+									<img src="img\Icons\Dashboard\Filter/territory.png" alt="">
+									<span></span>
+								</p>
+								<button>CHANGE</button>
+<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="audi">
+								
+							</div>
+							<div class="selectOptions ">
+								<span class="firstMake">Make:</span>
+								<select name="make" id="makeAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+								<span class="firstVariant">Variant:</span>
+								<select name="variant" id="variantAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+								<span class="firstTerritory">Territory:</span>
+								<select name="territory" id="territoryAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+								<span class="secondModel">Model</span>
+								<select name="model" id="modelAuto" value="select" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+								<span class="secondYear">Year</span>
+								<select name="year" id="yearAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+								<button class = "btn btn-default">APPLY FILTER</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row charts chartsDashboard">
+						<div class="col-lg-12 col-md-12">
+							<div>
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<p><u>Deprecation of</u> Audi A4 <u>Over Time</u></p>
+										<button><a href="chart_depreciation_model.html">More Details</a></button>
+									
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+										
+									</div>
+									<div id="Depreciation" style="width:100%;">
+									</div>
+								</div>
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<p><u>Supply & Deman</u>d of Audi A4 <u>2012</u></p>
+										<button>More Details</button>
+										
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+										
+									</div>
+									<div id="Supply" style="width:100%;">
+
+									</div>
+								</div>
+								<div class="row chartsPart raking">
+									<div class="makeRanking col-lg-4 col-md-4">
+										<p><span>Make</span> Ranking</p>
+										
+										<img src="img\Icons\Dashboard/question.png" alt="question">
+										<div>
+											<button><p class="pull-left">Audi</p> <span class="pull-right">13th</span></button>
+											<button><p class="pull-left">BMW</p> <span class="pull-right">1st</span></button>
+											<button><p class="pull-left">Honda</p> <span class="pull-right">2nd</span></button>
+											<button><p class="pull-left">Toyota</p> <span class="pull-right">3th</span></button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+									<div class="modelRanking col-lg-4 col-md-4">
+										<p><span>Model</span> Ranking</p>
+										<img src="img\Icons\Dashboard/question.png" alt="question">
+										<div>
+											<button><p class="pull-left">Audi</p> <span class="pull-right">13th</span></button>
+											<button><p class="pull-left">BMW</p> <span class="pull-right">1st</span></button>
+											<button><p class="pull-left">Honda</p> <span class="pull-right">2nd</span></button>
+											<button><p class="pull-left">Toyota</p> <span class="pull-right">3th</span></button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+										<div class="variantRanking col-lg-4 col-md-4">
+											<p><u>Variant</u> Ranking</p>
+											<img src="img\Icons\Dashboard/question.png" alt="question">
+										<div>
+											<button><p class="pull-left">Audi</p> <span class="pull-right">13th</span></button>
+											<button><p class="pull-left">BMW</p> <span class="pull-right">1st</span></button>
+											<button><p class="pull-left">Honda</p> <span class="pull-right">2nd</span></button>
+											<button><p class="pull-left">Toyota</p> <span class="pull-right">3th</span></button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<p><u>Geolocation</u> of Audi A4 <u>2012</u></p>
+										<button>More Details</button>
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+									</div>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+											<div id="avgMarketPrice">
+												
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 geocharts">
+											<h6 class="text-center">Heat Map of Kuala Lumpur</h6>
+											<div id="map" class="map-area"></div>
+											<div id="legend" class="legend-area">
+									    		<div id="legendGradient" class="legendGradient-area"></div>
+											</div>
+										</div>
+									</div>
+								<div class="clear"></div>
+								</div>
+								
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<p><u>Market Price</u> of Audi A4 <u>Over Tim</u>e</p>
+										<button>More Details</button>
+										
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+									</div>
+									<div id="marketPrice" style="width:100%">
+										
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="container-fluid makeDecisions">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-offset-xs-2">
+						<h2>Make smarter decisions today.</h2>
+					</div>
+				</div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  message">
+									<input type="name" class="form-control pull-left" id="exampleInputEmail3" placeholder="Name">
+									<input type="company" class="form-control pull-left" id="exampleInputEmail3" placeholder="Company">
+									<input type="email" class="form-control pull-left" id="exampleInputEmail3" placeholder="Email">
+									<textarea class="form-control" rows="5" placeholder="New Message"></textarea>
+									<div>
+										<img src="img/Functional/SendEmail.png" alt="sent message">
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 lightLogo">
+								<a class="navbar-brand" href="#"><img src="img/iCarDataLight.png" alt="Logo Light" ></a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>FEATURES</p>
+								<ul>
+									<li><a href="#">Depreciation</a></li>
+									<li><a href="#">Supply &Demand
+									</a></li>
+									<li><a href="#">Ranking
+									</a></li>
+									<li><a href="#">Geolocation</a></li>
+									<li><a href="#">Market Price</a> </li>
+								</ul>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>COMPANY</p>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Press Room</a></li>
+									<li><a href="#">Investor Relations</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>RESOURCES</p>
+								<ul>
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Personal Data Protection</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div>
+<div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 copy-right">
+						
+					</div>
+					<div class="col-lg-4 col-lg-offset-4 col-md-6  col-sm-6  col-xs-6   conditions">
+						<p ><a href="">Terms & Conditions·  Privacy Policy</a></p>
+<div class="clear"></div>
+					</div>
+				</div>
+<div class="empaty-large"></div>
+			</div>
+		</div>
+		
+
+	<script type="text/javascript" src="js/show_map.js"></script>
+  <script src="js/script_search.js"></script> 
+ <script>
+			$(document).ready(function(){
+/*date and copy right*/
+
+	   		var date=new Date(),
+	        year = date.getFullYear(),
+	       	text = "Copyright " + year + " iCarData.com. All rights reserved.";
+	        
+	        $('.copy-right').html('<p class="text-align-left">' + text + '</p>');
+/*choose subscribe method*/
+
+			$('.payPer').on('click', function(){
+		    		$('.annualSubscribe.activePayAnnual').removeClass('activePayAnnual');
+		    		$(this).addClass('activePayAnnual');
+				});
+
+	        $('.annualSubscribe').on('click', function(){
+		    		$('.payPer.activePayAnnual').removeClass('activePayAnnual');
+		    		$(this).addClass('activePayAnnual');
+				});
+	       
+
+
+
+$(function() {
+  $('#Depreciation').highcharts({
+    chart: {
+      type: 'scatter',
+      zoomType: 'xy',
+      marginTop:100
+},
+    title: {
+      text: '',
+        align:"left",
+        y:5
+    },
+    
+    xAxis: {
+      title: {
+        enabled: true,
+        text: 'Year'
+      },
+      startOnTick: true,
+      endOnTick: true,
+      showLastLabel: true
+    },
+    yAxis: {
+      title: {
+        text: 'Pricing (RM)'
+      }
+    },
+    legend: {
+      layout: 'horizontal',
+      align: 'right',
+      verticalAlign: 'top',
+      x: 0,
+      y: 40,
+      floating: true,
+      backgroundColor: '#FFFFFF',
+      
+    },
+    plotOptions: {
+      scatter: {
+        marker: {
+          radius: 5,
+          states: {
+            hover: {
+              enabled: true,
+              lineColor: 'rgb(100,100,100)'
+            }
+          }
+        },
+        states: {
+          hover: {
+            marker: {
+              enabled: false
+            }
+          }
+        },
+        tooltip: {
+          headerFormat: '<b>{series.name}</b><br>',
+          pointFormat: '{point.x} cm, {point.y} kg'
+        }
+      }
+    },
+     credits: {
+        enabled: false
+    },
+    series: [{
+      regression: true,
+      regressionSettings: {
+        type: 'linear',
+        color: '#403e5b',
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">No. of Listings</p>',
+
+      },
+      name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">Audi A4 Price</p>',
+      type:'bubble',
+      marker:{
+	            lineColor: '#403e5b',
+	            fillColor: 'white'
+             },
+      data: [{
+        x: 2011,
+        y: 10,
+        z: 13.8
+      }, {
+        x: 2012,
+        y: 35,
+        z: 14.7
+      }, {
+        x: 2013,
+        y: 48,
+        z: 15.8
+      }, {
+        x: 2014,
+        y: 53,
+        z: 12
+      }, {
+        x: 2015,
+        y: 68.3,
+        z: 11.8
+      }, {
+        x: 2016,
+        y: 78.9,
+        z: 16.6
+      }, {
+        x: 2017,
+        y: 92.5,
+        z: 14.5
+      },]
+ 
+
+
+    }]
+  });
+});
+
+
+
+
+(function (H) {
+    H.wrap(H.seriesTypes.column.prototype, 'translate', function (proceed) {
+        var options = this.options,
+            rTopLeft = options.borderRadiusTopLeft || 0,
+            rTopRight = options.borderRadiusTopRight || 0,
+            rBottomRight = options.borderRadiusBottomRight || 0,
+            rBottomLeft = options.borderRadiusBottomLeft || 0;
+
+        proceed.call(this);
+
+        if (rTopLeft || rTopRight || rBottomRight || rBottomLeft) {
+            H.each(this.points, function (point) {
+                var shapeArgs = point.shapeArgs,
+                    w = shapeArgs.width,
+                    h = shapeArgs.height,
+                    x = shapeArgs.x,
+                    y = shapeArgs.y;
+                point.shapeType = 'path';
+                point.shapeArgs = [
+                    'M', x + rTopLeft, y,
+                    // top side
+                    'L', x + w - rTopRight, y,
+                    // top right corner
+                    'C', x + w - rTopRight / 2, y, x + w, y + rTopRight / 2, x + w, y + rTopRight,
+                    // right side
+                    'L', x + w, y + h - rBottomRight,
+                    // bottom right corner
+                    'C', x + w, y + h - rBottomRight / 2, x + w - rBottomRight / 2, y + h, x + w - rBottomRight, y + h,
+                    // bottom side
+                    'L', x + rBottomLeft, y + h,
+                    // bottom left corner
+                    'C', x + rBottomLeft / 2, y + h, x, y + h - rBottomLeft / 2, x, y + h - rBottomLeft,
+                    // left side
+                    'L', x, y + rTopLeft,
+                    // top left corner
+                    'C', x, y + rTopLeft / 2, x + rTopLeft / 2, y, x + rTopLeft, y,
+                    'Z'
+                ];
+                    
+            });
+        }
+    });
+}(Highcharts));
+
+
+Highcharts.chart('Supply', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','35k', '55k', '75k', '<p style="color:#009c63;font-weight:600">'+'95k'+'</p>', '115k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 50,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,  15, 22, 29.5, 34,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,  0, 0, 0, {y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,12,25,32,29,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,35,2,20,40,8],
+        
+    }]
+       
+});
+
+/*var chart = Highcharts.chart('Geolocation', {
+	type: 'bar',
+    title: {
+        text: 'Chart.update'
+    },
+
+    subtitle: {
+        text: 'Plain'
+    },
+    legend: {
+        reversed: true
+    },
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+        
+
+        colorByPoint: true,
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        showInLegend: false
+    }]
+
+});*/
+
+/*Highcharts.chart('Geolocation', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Stacked bar chart',
+        align:"left"
+    },
+    xAxis: {
+        categories: ['Malaysia', 'Thailand', 'Indonesia', 'Singapore', 'Philippines']
+    },
+    yAxis: {
+        min: 0,
+       
+    },
+   
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    },
+    series: [{
+        name: 'John',
+        colorByPoint: true,
+        data: [10,8,6,4,2]
+    }]
+});*/
+
+
+
+Highcharts.chart('avgMarketPrice', {
+    chart: {
+        type: 'bar',
+        marginTop:100
+
+    },
+    title: {
+        text: '',
+         align:"left",
+         y: 5 
+    },
+    
+    xAxis: {
+        categories: ['Kuala-Lumpur', 'Penang', 'Selangor', 'Perak', 'Johor'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: '',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: 'Avg Market Price'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 40,
+        floating: true,
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+    	name:'<p style="font-family: AvenirNextLTProRegular; font-size:13px">Avg. Market Price</p>',
+        color:'#F0F8FF',
+        borderColor:'#403e5b',
+        data: [{y:700, color:'#009c63'}, 31, 635, 203, 100]
+    },]
+});
+
+/*geocharts*/
+
+google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['Malaysia', 200],
+          ['Thailand', 300],
+          ['Indonesia', 400],
+          ['Singapore', 500],
+          ['Philippines', 600],
+        ]);
+
+        var options = {
+        	region: 142,
+        	datalessRegionColor: '#55536C',
+        	colorAxis: {colors: ['#009C63','#ffC000']}
+
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+
+
+
+
+
+
+
+ Highcharts.chart('marketPrice', {
+   chart: {
+        type: 'column',
+        marginTop:80
+    },
+    title: {
+        text: '',
+    },
+    subtitle: {
+    	text: 'Price in RM',
+    	align: 'left',
+    	y:60,
+    	x:30
+	},
+    xAxis: {
+        categories: ['2011', '2012', '2013', '2014', '2015','2016', '2017']
+    },
+    yAxis: {
+        min: 50,
+        startOnTick: false,
+        title: {
+            text: '',
+            layout: 'vertical'
+
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'normal',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+            }
+        }
+    },
+    legend: {
+    	layout: 'horizontal',
+        align: 'right',
+        x: 5,
+        verticalAlign: 'top',
+        y: 40,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+        borderColor: '#CCC',
+        borderWidth: 0,
+        shadow: false
+    },
+    credits: {
+        enabled: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: false,
+                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+            }
+        }
+    },
+    series: [{
+        name:'<p style="font-family: AvenirNextLTProRegular; font-size:13px">Demand Price</p>',
+        color:'#009b63',
+        data: [70, 70, 54, 92, 55,69,70],
+    	marker: {
+            symbol: 'square'
+        },
+    }, 
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">Max Price</p>',
+        color:' rgba(0, 155, 98, 0.75)',
+        data: [70, 80, 73, 57, 62,106,80],
+    	marker: {
+            symbol: 'square'
+        },
+    },
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">Avg. Market Price</p>',
+    	minRange: 10,
+    	color:' rgba(64, 62, 91, 0.25)',    	
+        data: [70, 63, 95, 64,64,59,89],
+    	marker: {
+            symbol: 'square'
+        },
+    },
+     {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px">Min Price</p>',
+        color:"rgba(0, 155, 98, 0.5)",
+        data: [70, 66, 103, 82, 83,80,76],
+     	marker: {
+            symbol: 'square'
+        },
+    }],
+   
+});
+
+
+
+/*map charts*/
+var map, pointArray, heatmap, gradient;
+
+var taxiData = [
+  new google.maps.LatLng(37.782551, -122.445368),
+  new google.maps.LatLng(37.782745, -122.444586),
+  new google.maps.LatLng(37.782842, -122.443688),
+  new google.maps.LatLng(37.782919, -122.442815),
+  new google.maps.LatLng(37.782992, -122.442112),
+  new google.maps.LatLng(37.783100, -122.441461),
+  new google.maps.LatLng(37.783206, -122.440829),
+  new google.maps.LatLng(37.783273, -122.440324),
+  new google.maps.LatLng(37.783316, -122.440023),
+  new google.maps.LatLng(37.783357, -122.439794),
+  new google.maps.LatLng(37.783371, -122.439687),
+  new google.maps.LatLng(37.783368, -122.439666),
+  new google.maps.LatLng(37.783383, -122.439594),
+  new google.maps.LatLng(37.783508, -122.439525),
+  new google.maps.LatLng(37.783842, -122.439591),
+  new google.maps.LatLng(37.784147, -122.439668),
+  new google.maps.LatLng(37.784206, -122.439686),
+  new google.maps.LatLng(37.784386, -122.439790),
+  new google.maps.LatLng(37.784701, -122.439902),
+  new google.maps.LatLng(37.784965, -122.439938),
+  new google.maps.LatLng(37.785010, -122.439947),
+  new google.maps.LatLng(37.785360, -122.439952),
+  new google.maps.LatLng(37.785715, -122.440030),
+  new google.maps.LatLng(37.786117, -122.440119),
+  new google.maps.LatLng(37.786564, -122.440209),
+  new google.maps.LatLng(37.786905, -122.440270),
+  new google.maps.LatLng(37.786956, -122.440279),
+  new google.maps.LatLng(37.800224, -122.433520),
+  new google.maps.LatLng(37.800155, -122.434101),
+  new google.maps.LatLng(37.800160, -122.434430),
+  new google.maps.LatLng(37.800378, -122.434527),
+  new google.maps.LatLng(37.800738, -122.434598),
+  new google.maps.LatLng(37.800938, -122.434650),
+  new google.maps.LatLng(37.801024, -122.434889),
+  new google.maps.LatLng(37.800955, -122.435392),
+  new google.maps.LatLng(37.800886, -122.435959),
+  new google.maps.LatLng(37.800811, -122.436275),
+  new google.maps.LatLng(37.800788, -122.436299),
+  new google.maps.LatLng(37.800719, -122.436302),
+  new google.maps.LatLng(37.800702, -122.436298),
+  new google.maps.LatLng(37.800661, -122.436273),
+  new google.maps.LatLng(37.800395, -122.436172),
+  new google.maps.LatLng(37.800228, -122.436116),
+  new google.maps.LatLng(37.800169, -122.436130),
+  new google.maps.LatLng(37.800066, -122.436167),
+  new google.maps.LatLng(37.784345, -122.422922),
+  new google.maps.LatLng(37.784389, -122.422926),
+  new google.maps.LatLng(37.784437, -122.422924),
+  new google.maps.LatLng(37.784746, -122.422818),
+  new google.maps.LatLng(37.785436, -122.422959),
+  new google.maps.LatLng(37.786120, -122.423112),
+  new google.maps.LatLng(37.786433, -122.423029),
+  new google.maps.LatLng(37.786631, -122.421213),
+  new google.maps.LatLng(37.786660, -122.421033),
+  new google.maps.LatLng(37.786801, -122.420141),
+  new google.maps.LatLng(37.786823, -122.420034),
+  new google.maps.LatLng(37.786831, -122.419916),
+  new google.maps.LatLng(37.787034, -122.418208),
+  new google.maps.LatLng(37.787056, -122.418034),
+  new google.maps.LatLng(37.787169, -122.417145),
+  new google.maps.LatLng(37.787217, -122.416715),
+  new google.maps.LatLng(37.786144, -122.416403),
+  new google.maps.LatLng(37.785292, -122.416257),
+  new google.maps.LatLng(37.780666, -122.390374),
+  new google.maps.LatLng(37.780501, -122.391281),
+  new google.maps.LatLng(37.780148, -122.392052),
+  new google.maps.LatLng(37.780173, -122.391148),
+  new google.maps.LatLng(37.780693, -122.390592),
+  new google.maps.LatLng(37.781261, -122.391142),
+  new google.maps.LatLng(37.781808, -122.391730),
+  new google.maps.LatLng(37.782340, -122.392341),
+  new google.maps.LatLng(37.782812, -122.393022),
+  new google.maps.LatLng(37.783300, -122.393672),
+  new google.maps.LatLng(37.783809, -122.394275),
+  new google.maps.LatLng(37.784246, -122.394979),
+  new google.maps.LatLng(37.784791, -122.395958),
+  new google.maps.LatLng(37.785675, -122.396746),
+  new google.maps.LatLng(37.786262, -122.395780),
+  new google.maps.LatLng(37.786776, -122.395093),
+  new google.maps.LatLng(37.787282, -122.394426),
+  new google.maps.LatLng(37.787783, -122.393767),
+  new google.maps.LatLng(37.788343, -122.393184),
+  new google.maps.LatLng(37.788895, -122.392506),
+  new google.maps.LatLng(37.789371, -122.391701),
+  new google.maps.LatLng(37.789722, -122.390952),
+  new google.maps.LatLng(37.790315, -122.390305),
+  new google.maps.LatLng(37.790738, -122.389616),
+  new google.maps.LatLng(37.779448, -122.438702),
+  new google.maps.LatLng(37.779023, -122.438585),
+  new google.maps.LatLng(37.778542, -122.438492),
+  new google.maps.LatLng(37.778100, -122.438411),
+  new google.maps.LatLng(37.777986, -122.438376),
+  new google.maps.LatLng(37.777680, -122.438313),
+  new google.maps.LatLng(37.777316, -122.438273),
+  new google.maps.LatLng(37.777135, -122.438254),
+  new google.maps.LatLng(37.776987, -122.438303),
+  new google.maps.LatLng(37.776946, -122.438404),
+  new google.maps.LatLng(37.776944, -122.438467),
+  new google.maps.LatLng(37.776892, -122.438459),
+  new google.maps.LatLng(37.776842, -122.438442),
+  new google.maps.LatLng(37.776822, -122.438391),
+  new google.maps.LatLng(37.776814, -122.438412),
+  new google.maps.LatLng(37.776787, -122.438628),
+  new google.maps.LatLng(37.776729, -122.438650),
+  new google.maps.LatLng(37.776759, -122.438677),
+  new google.maps.LatLng(37.776772, -122.438498),
+  new google.maps.LatLng(37.776787, -122.438389),
+  new google.maps.LatLng(37.776848, -122.438283),
+  new google.maps.LatLng(37.776870, -122.438239),
+  new google.maps.LatLng(37.777015, -122.438198),
+  new google.maps.LatLng(37.777333, -122.438256),
+  new google.maps.LatLng(37.777595, -122.438308),
+  new google.maps.LatLng(37.777797, -122.438344),
+  new google.maps.LatLng(37.778160, -122.438442),
+  new google.maps.LatLng(37.778414, -122.438508),
+  new google.maps.LatLng(37.778445, -122.438516),
+  new google.maps.LatLng(37.778503, -122.438529),
+  new google.maps.LatLng(37.778607, -122.438549),
+  new google.maps.LatLng(37.778670, -122.438644),
+  new google.maps.LatLng(37.778847, -122.438706),
+  new google.maps.LatLng(37.779240, -122.438744),
+  new google.maps.LatLng(37.779738, -122.438822),
+  new google.maps.LatLng(37.780201, -122.438882),
+  new google.maps.LatLng(37.780400, -122.438905),
+  new google.maps.LatLng(37.780501, -122.438921),
+  new google.maps.LatLng(37.780892, -122.438986),
+  new google.maps.LatLng(37.781446, -122.439087),
+  new google.maps.LatLng(37.781985, -122.439199),
+  new google.maps.LatLng(37.782239, -122.439249),
+  new google.maps.LatLng(37.782286, -122.439266),
+  new google.maps.LatLng(37.797847, -122.429388),
+  new google.maps.LatLng(37.797874, -122.429180),
+  new google.maps.LatLng(37.797885, -122.429069),
+  new google.maps.LatLng(37.797887, -122.429050),
+  new google.maps.LatLng(37.797933, -122.428954),
+  new google.maps.LatLng(37.798242, -122.428990),
+  new google.maps.LatLng(37.798617, -122.429075),
+  new google.maps.LatLng(37.798719, -122.429092),
+  new google.maps.LatLng(37.798944, -122.429145),
+  new google.maps.LatLng(37.799320, -122.429251),
+  new google.maps.LatLng(37.799590, -122.429309),
+  new google.maps.LatLng(37.799677, -122.429324),
+  new google.maps.LatLng(37.799966, -122.429360),
+  new google.maps.LatLng(37.800288, -122.429430),
+  new google.maps.LatLng(37.800443, -122.429461),
+  new google.maps.LatLng(37.800465, -122.429474),
+  new google.maps.LatLng(37.800644, -122.429540),
+  new google.maps.LatLng(37.800948, -122.429620),
+  new google.maps.LatLng(37.801242, -122.429685),
+  new google.maps.LatLng(37.801375, -122.429702),
+  new google.maps.LatLng(37.801400, -122.429703),
+  new google.maps.LatLng(37.801453, -122.429707),
+  new google.maps.LatLng(37.801473, -122.429709),
+  new google.maps.LatLng(37.801532, -122.429707),
+  new google.maps.LatLng(37.801852, -122.429729),
+  new google.maps.LatLng(37.802173, -122.429789),
+  new google.maps.LatLng(37.802459, -122.429847),
+  new google.maps.LatLng(37.802554, -122.429825),
+  new google.maps.LatLng(37.802647, -122.429549),
+  new google.maps.LatLng(37.802693, -122.429179),
+  new google.maps.LatLng(37.802729, -122.428751),
+  new google.maps.LatLng(37.766104, -122.409291),
+  new google.maps.LatLng(37.766103, -122.409268),
+  new google.maps.LatLng(37.766138, -122.409229),
+  new google.maps.LatLng(37.766183, -122.409231),
+  new google.maps.LatLng(37.766153, -122.409276),
+  new google.maps.LatLng(37.766005, -122.409365),
+  new google.maps.LatLng(37.765897, -122.409570),
+  new google.maps.LatLng(37.765767, -122.409739),
+  new google.maps.LatLng(37.765693, -122.410389),
+  new google.maps.LatLng(37.765615, -122.411201),
+  new google.maps.LatLng(37.765533, -122.412121),
+  new google.maps.LatLng(37.765467, -122.412939),
+  new google.maps.LatLng(37.765444, -122.414821),
+  new google.maps.LatLng(37.765444, -122.414964),
+  new google.maps.LatLng(37.765318, -122.415424),
+  new google.maps.LatLng(37.763961, -122.415296),
+  new google.maps.LatLng(37.763115, -122.415196),
+  new google.maps.LatLng(37.762967, -122.415183),
+  new google.maps.LatLng(37.762278, -122.415127),
+  new google.maps.LatLng(37.761675, -122.415055),
+  new google.maps.LatLng(37.760932, -122.414988),
+  new google.maps.LatLng(37.759337, -122.414862),
+  new google.maps.LatLng(37.773187, -122.421922),
+  new google.maps.LatLng(37.773043, -122.422118),
+  new google.maps.LatLng(37.773007, -122.422165),
+  new google.maps.LatLng(37.772979, -122.422219),
+  new google.maps.LatLng(37.772865, -122.422394),
+  new google.maps.LatLng(37.772779, -122.422503),
+  new google.maps.LatLng(37.772676, -122.422701),
+  new google.maps.LatLng(37.772606, -122.422806),
+  new google.maps.LatLng(37.772566, -122.422840),
+  new google.maps.LatLng(37.772508, -122.422852),
+  new google.maps.LatLng(37.772387, -122.423011),
+  new google.maps.LatLng(37.772099, -122.423328),
+  new google.maps.LatLng(37.771704, -122.423783),
+  new google.maps.LatLng(37.771481, -122.424081),
+  new google.maps.LatLng(37.771400, -122.424179),
+  new google.maps.LatLng(37.771352, -122.424220),
+  new google.maps.LatLng(37.771248, -122.424327),
+  new google.maps.LatLng(37.770904, -122.424781),
+  new google.maps.LatLng(37.770520, -122.425283),
+  new google.maps.LatLng(37.770337, -122.425553),
+  new google.maps.LatLng(37.770128, -122.425832),
+  new google.maps.LatLng(37.769756, -122.426331),
+  new google.maps.LatLng(37.769300, -122.426902),
+  new google.maps.LatLng(37.769132, -122.427065),
+  new google.maps.LatLng(37.769092, -122.427103),
+  new google.maps.LatLng(37.768979, -122.427172),
+  new google.maps.LatLng(37.768595, -122.427634),
+  new google.maps.LatLng(37.768372, -122.427913),
+  new google.maps.LatLng(37.768337, -122.427961),
+  new google.maps.LatLng(37.768244, -122.428138),
+  new google.maps.LatLng(37.767942, -122.428581),
+  new google.maps.LatLng(37.767482, -122.429094),
+  new google.maps.LatLng(37.767031, -122.429606),
+  new google.maps.LatLng(37.766732, -122.429986),
+  new google.maps.LatLng(37.766680, -122.430058),
+  new google.maps.LatLng(37.766633, -122.430109),
+  new google.maps.LatLng(37.766580, -122.430211),
+  new google.maps.LatLng(37.766367, -122.430594),
+  new google.maps.LatLng(37.765910, -122.431137),
+  new google.maps.LatLng(37.765353, -122.431806),
+  new google.maps.LatLng(37.764962, -122.432298),
+  new google.maps.LatLng(37.764868, -122.432486),
+  new google.maps.LatLng(37.764518, -122.432913),
+  new google.maps.LatLng(37.763435, -122.434173),
+  new google.maps.LatLng(37.762847, -122.434953),
+  new google.maps.LatLng(37.762291, -122.435935),
+  new google.maps.LatLng(37.762224, -122.436074),
+  new google.maps.LatLng(37.761957, -122.436892),
+  new google.maps.LatLng(37.761652, -122.438886),
+  new google.maps.LatLng(37.761284, -122.439955),
+  new google.maps.LatLng(37.761210, -122.440068),
+  new google.maps.LatLng(37.761064, -122.440720),
+  new google.maps.LatLng(37.761040, -122.441411),
+  new google.maps.LatLng(37.761048, -122.442324),
+  new google.maps.LatLng(37.760851, -122.443118),
+  new google.maps.LatLng(37.759977, -122.444591),
+  new google.maps.LatLng(37.759913, -122.444698),
+  new google.maps.LatLng(37.759623, -122.445065),
+  new google.maps.LatLng(37.758902, -122.445158),
+  new google.maps.LatLng(37.758428, -122.444570),
+  new google.maps.LatLng(37.757687, -122.443340),
+  new google.maps.LatLng(37.757583, -122.443240),
+  new google.maps.LatLng(37.757019, -122.442787),
+  new google.maps.LatLng(37.756603, -122.442322),
+  new google.maps.LatLng(37.756380, -122.441602),
+  new google.maps.LatLng(37.755790, -122.441382),
+  new google.maps.LatLng(37.754493, -122.442133),
+  new google.maps.LatLng(37.754361, -122.442206),
+  new google.maps.LatLng(37.753719, -122.442650),
+  new google.maps.LatLng(37.753096, -122.442915),
+  new google.maps.LatLng(37.751617, -122.443211),
+  new google.maps.LatLng(37.751496, -122.443246),
+  new google.maps.LatLng(37.750733, -122.443428),
+  new google.maps.LatLng(37.750126, -122.443536),
+  new google.maps.LatLng(37.750103, -122.443784),
+  new google.maps.LatLng(37.750390, -122.444010),
+  new google.maps.LatLng(37.750448, -122.444013),
+  new google.maps.LatLng(37.750536, -122.444040),
+  new google.maps.LatLng(37.750493, -122.444141),
+  new google.maps.LatLng(37.790859, -122.402808),
+  new google.maps.LatLng(37.790864, -122.402768),
+  new google.maps.LatLng(37.790995, -122.402539),
+  new google.maps.LatLng(37.791148, -122.402172),
+  new google.maps.LatLng(37.791385, -122.401312),
+  new google.maps.LatLng(37.791405, -122.400776),
+  new google.maps.LatLng(37.791288, -122.400528),
+  new google.maps.LatLng(37.791113, -122.400441),
+  new google.maps.LatLng(37.791027, -122.400395),
+  new google.maps.LatLng(37.791094, -122.400311),
+  new google.maps.LatLng(37.791211, -122.400183),
+  new google.maps.LatLng(37.791060, -122.399334),
+  new google.maps.LatLng(37.790538, -122.398718),
+  new google.maps.LatLng(37.790095, -122.398086),
+  new google.maps.LatLng(37.789644, -122.397360),
+  new google.maps.LatLng(37.789254, -122.396844),
+  new google.maps.LatLng(37.788855, -122.396397),
+  new google.maps.LatLng(37.788483, -122.395963),
+  new google.maps.LatLng(37.788015, -122.395365),
+  new google.maps.LatLng(37.787558, -122.394735),
+  new google.maps.LatLng(37.787472, -122.394323),
+  new google.maps.LatLng(37.787630, -122.394025),
+  new google.maps.LatLng(37.787767, -122.393987),
+  new google.maps.LatLng(37.787486, -122.394452),
+  new google.maps.LatLng(37.786977, -122.395043),
+  new google.maps.LatLng(37.786583, -122.395552),
+  new google.maps.LatLng(37.786540, -122.395610),
+  new google.maps.LatLng(37.786516, -122.395659),
+  new google.maps.LatLng(37.786378, -122.395707),
+  new google.maps.LatLng(37.786044, -122.395362),
+  new google.maps.LatLng(37.785598, -122.394715),
+  new google.maps.LatLng(37.785321, -122.394361),
+  new google.maps.LatLng(37.785207, -122.394236),
+  new google.maps.LatLng(37.785751, -122.394062),
+  new google.maps.LatLng(37.785996, -122.393881),
+  new google.maps.LatLng(37.786092, -122.393830),
+  new google.maps.LatLng(37.785998, -122.393899),
+  new google.maps.LatLng(37.785114, -122.394365),
+  new google.maps.LatLng(37.785022, -122.394441),
+  new google.maps.LatLng(37.784823, -122.394635),
+  new google.maps.LatLng(37.784719, -122.394629),
+  new google.maps.LatLng(37.785069, -122.394176),
+  new google.maps.LatLng(37.785500, -122.393650),
+  new google.maps.LatLng(37.785770, -122.393291),
+  new google.maps.LatLng(37.785839, -122.393159),
+  new google.maps.LatLng(37.782651, -122.400628),
+  new google.maps.LatLng(37.782616, -122.400599),
+  new google.maps.LatLng(37.782702, -122.400470),
+  new google.maps.LatLng(37.782915, -122.400192),
+  new google.maps.LatLng(37.783137, -122.399887),
+  new google.maps.LatLng(37.783414, -122.399519),
+  new google.maps.LatLng(37.783629, -122.399237),
+  new google.maps.LatLng(37.783688, -122.399157),
+  new google.maps.LatLng(37.783716, -122.399106),
+  new google.maps.LatLng(37.783798, -122.399072),
+  new google.maps.LatLng(37.783997, -122.399186),
+  new google.maps.LatLng(37.784271, -122.399538),
+  new google.maps.LatLng(37.784577, -122.399948),
+  new google.maps.LatLng(37.784828, -122.400260),
+  new google.maps.LatLng(37.784999, -122.400477),
+  new google.maps.LatLng(37.785113, -122.400651),
+  new google.maps.LatLng(37.785155, -122.400703),
+  new google.maps.LatLng(37.785192, -122.400749),
+  new google.maps.LatLng(37.785278, -122.400839),
+  new google.maps.LatLng(37.785387, -122.400857),
+  new google.maps.LatLng(37.785478, -122.400890),
+  new google.maps.LatLng(37.785526, -122.401022),
+  new google.maps.LatLng(37.785598, -122.401148),
+  new google.maps.LatLng(37.785631, -122.401202),
+  new google.maps.LatLng(37.785660, -122.401267),
+  new google.maps.LatLng(37.803986, -122.426035),
+  new google.maps.LatLng(37.804102, -122.425089),
+  new google.maps.LatLng(37.804211, -122.424156),
+  new google.maps.LatLng(37.803861, -122.423385),
+  new google.maps.LatLng(37.803151, -122.423214),
+  new google.maps.LatLng(37.802439, -122.423077),
+  new google.maps.LatLng(37.801740, -122.422905),
+  new google.maps.LatLng(37.801069, -122.422785),
+  new google.maps.LatLng(37.800345, -122.422649),
+  new google.maps.LatLng(37.799633, -122.422603),
+  new google.maps.LatLng(37.799750, -122.421700),
+  new google.maps.LatLng(37.799885, -122.420854),
+  new google.maps.LatLng(37.799209, -122.420607),
+  new google.maps.LatLng(37.795656, -122.400395),
+  new google.maps.LatLng(37.795203, -122.400304),
+  new google.maps.LatLng(37.778738, -122.415584),
+  new google.maps.LatLng(37.778812, -122.415189),
+  new google.maps.LatLng(37.778824, -122.415092),
+  new google.maps.LatLng(37.778833, -122.414932),
+  new google.maps.LatLng(37.778834, -122.414898),
+  new google.maps.LatLng(37.778740, -122.414757),
+  new google.maps.LatLng(37.778501, -122.414433),
+  new google.maps.LatLng(37.778182, -122.414026),
+  new google.maps.LatLng(37.777851, -122.413623),
+  new google.maps.LatLng(37.777486, -122.413166),
+  new google.maps.LatLng(37.777109, -122.412674),
+  new google.maps.LatLng(37.776743, -122.412186),
+  new google.maps.LatLng(37.776440, -122.411800),
+  new google.maps.LatLng(37.776295, -122.411614),
+  new google.maps.LatLng(37.776158, -122.411440),
+  new google.maps.LatLng(37.775806, -122.410997),
+  new google.maps.LatLng(37.775422, -122.410484),
+  new google.maps.LatLng(37.775126, -122.410087),
+  new google.maps.LatLng(37.775012, -122.409854),
+  new google.maps.LatLng(37.775164, -122.409573),
+  new google.maps.LatLng(37.775498, -122.409180),
+  new google.maps.LatLng(37.775868, -122.408730),
+  new google.maps.LatLng(37.776256, -122.408240),
+  new google.maps.LatLng(37.776519, -122.407928),
+  new google.maps.LatLng(37.776539, -122.407904),
+  new google.maps.LatLng(37.776595, -122.407854),
+  new google.maps.LatLng(37.776853, -122.407547),
+  new google.maps.LatLng(37.777234, -122.407087),
+  new google.maps.LatLng(37.777644, -122.406558),
+  new google.maps.LatLng(37.778066, -122.406017),
+  new google.maps.LatLng(37.778468, -122.405499),
+  new google.maps.LatLng(37.778866, -122.404995),
+  new google.maps.LatLng(37.779295, -122.404455),
+  new google.maps.LatLng(37.779695, -122.403950),
+  new google.maps.LatLng(37.779982, -122.403584),
+  new google.maps.LatLng(37.780295, -122.403223),
+  new google.maps.LatLng(37.780664, -122.402766),
+  new google.maps.LatLng(37.781043, -122.402288),
+  new google.maps.LatLng(37.781399, -122.401823),
+  new google.maps.LatLng(37.781727, -122.401407),
+  new google.maps.LatLng(37.781853, -122.401247),
+  new google.maps.LatLng(37.781894, -122.401195),
+  new google.maps.LatLng(37.782076, -122.400977),
+  new google.maps.LatLng(37.782338, -122.400603),
+  new google.maps.LatLng(37.782666, -122.400133),
+  new google.maps.LatLng(37.783048, -122.399634),
+  new google.maps.LatLng(37.783450, -122.399198),
+  new google.maps.LatLng(37.783791, -122.398998),
+  new google.maps.LatLng(37.784177, -122.398959),
+  new google.maps.LatLng(37.784388, -122.398971),
+  new google.maps.LatLng(37.784404, -122.399128),
+  new google.maps.LatLng(37.784586, -122.399524),
+  new google.maps.LatLng(37.784835, -122.399927),
+  new google.maps.LatLng(37.785116, -122.400307),
+  new google.maps.LatLng(37.785282, -122.400539),
+  new google.maps.LatLng(37.785346, -122.400692),
+  new google.maps.LatLng(37.765769, -122.407201),
+  new google.maps.LatLng(37.765790, -122.407414),
+  new google.maps.LatLng(37.765802, -122.407755),
+  new google.maps.LatLng(37.765791, -122.408219),
+  new google.maps.LatLng(37.765763, -122.408759),
+  new google.maps.LatLng(37.765726, -122.409348),
+  new google.maps.LatLng(37.765716, -122.409882),
+  new google.maps.LatLng(37.765708, -122.410202),
+  new google.maps.LatLng(37.765705, -122.410253),
+  new google.maps.LatLng(37.765707, -122.410369),
+  new google.maps.LatLng(37.765692, -122.410720),
+  new google.maps.LatLng(37.765699, -122.411215),
+  new google.maps.LatLng(37.765687, -122.411789),
+  new google.maps.LatLng(37.765666, -122.412373),
+  new google.maps.LatLng(37.765598, -122.412883),
+  new google.maps.LatLng(37.765543, -122.413039),
+  new google.maps.LatLng(37.765532, -122.413125),
+  new google.maps.LatLng(37.765500, -122.413553),
+  new google.maps.LatLng(37.765448, -122.414053),
+  new google.maps.LatLng(37.765388, -122.414645),
+  new google.maps.LatLng(37.765323, -122.415250),
+  new google.maps.LatLng(37.765303, -122.415847),
+  new google.maps.LatLng(37.765251, -122.416439),
+  new google.maps.LatLng(37.765204, -122.417020),
+  new google.maps.LatLng(37.765172, -122.417556),
+  new google.maps.LatLng(37.765164, -122.418075),
+  new google.maps.LatLng(37.765153, -122.418618),
+  new google.maps.LatLng(37.765136, -122.419112),
+  new google.maps.LatLng(37.765129, -122.419378),
+  new google.maps.LatLng(37.765119, -122.419481),
+  new google.maps.LatLng(37.765100, -122.419852),
+  new google.maps.LatLng(37.765083, -122.420349),
+  new google.maps.LatLng(37.765045, -122.420930),
+  new google.maps.LatLng(37.764992, -122.421481),
+  new google.maps.LatLng(37.764980, -122.421695),
+  new google.maps.LatLng(37.764993, -122.421843),
+  new google.maps.LatLng(37.764986, -122.422255),
+  new google.maps.LatLng(37.764975, -122.422823),
+  new google.maps.LatLng(37.764939, -122.423411),
+  new google.maps.LatLng(37.764902, -122.424014),
+  new google.maps.LatLng(37.764853, -122.424576),
+  new google.maps.LatLng(37.764826, -122.424922),
+  new google.maps.LatLng(37.764796, -122.425375),
+  new google.maps.LatLng(37.764782, -122.425869),
+  new google.maps.LatLng(37.764768, -122.426089),
+  new google.maps.LatLng(37.764766, -122.426117),
+  new google.maps.LatLng(37.764723, -122.426276),
+  new google.maps.LatLng(37.764681, -122.426649),
+  new google.maps.LatLng(37.782012, -122.404200),
+  new google.maps.LatLng(37.781574, -122.404911),
+  new google.maps.LatLng(37.781055, -122.405597),
+  new google.maps.LatLng(37.780479, -122.406341),
+  new google.maps.LatLng(37.779996, -122.406939),
+  new google.maps.LatLng(37.779459, -122.407613),
+  new google.maps.LatLng(37.778953, -122.408228),
+  new google.maps.LatLng(37.778409, -122.408839),
+  new google.maps.LatLng(37.777842, -122.409501),
+  new google.maps.LatLng(37.777334, -122.410181),
+  new google.maps.LatLng(37.776809, -122.410836),
+  new google.maps.LatLng(37.776240, -122.411514),
+  new google.maps.LatLng(37.775725, -122.412145),
+  new google.maps.LatLng(37.775190, -122.412805),
+  new google.maps.LatLng(37.774672, -122.413464),
+  new google.maps.LatLng(37.774084, -122.414186),
+  new google.maps.LatLng(37.773533, -122.413636),
+  new google.maps.LatLng(37.773021, -122.413009),
+  new google.maps.LatLng(37.772501, -122.412371),
+  new google.maps.LatLng(37.771964, -122.411681),
+  new google.maps.LatLng(37.771479, -122.411078),
+  new google.maps.LatLng(37.770992, -122.410477),
+  new google.maps.LatLng(37.770467, -122.409801),
+  new google.maps.LatLng(37.770090, -122.408904),
+  new google.maps.LatLng(37.769657, -122.408103),
+  new google.maps.LatLng(37.769132, -122.407276),
+  new google.maps.LatLng(37.768564, -122.406469),
+  new google.maps.LatLng(37.767980, -122.405745),
+  new google.maps.LatLng(37.767380, -122.405299),
+  new google.maps.LatLng(37.766604, -122.405297),
+  new google.maps.LatLng(37.765838, -122.405200),
+  new google.maps.LatLng(37.765139, -122.405139),
+  new google.maps.LatLng(37.764457, -122.405094),
+  new google.maps.LatLng(37.763716, -122.405142),
+  new google.maps.LatLng(37.762932, -122.405398),
+  new google.maps.LatLng(37.762126, -122.405813),
+  new google.maps.LatLng(37.761344, -122.406215),
+  new google.maps.LatLng(37.760556, -122.406495),
+  new google.maps.LatLng(37.759732, -122.406484),
+  new google.maps.LatLng(37.758910, -122.406228),
+  new google.maps.LatLng(37.758182, -122.405695),
+  new google.maps.LatLng(37.757676, -122.405118),
+  new google.maps.LatLng(37.757039, -122.404346),
+  new google.maps.LatLng(37.756335, -122.403719),
+  new google.maps.LatLng(37.755503, -122.403406),
+  new google.maps.LatLng(37.754665, -122.403242),
+  new google.maps.LatLng(37.753837, -122.403172),
+  new google.maps.LatLng(37.752986, -122.403112),
+  new google.maps.LatLng(37.751266, -122.403355)
+];
+
+function initialize() {
+  var mapOptions = {
+    zoom: 13,
+    center: new google.maps.LatLng(37.774546, -122.433523),
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+
+$('.map-area').each(function(){
+  map = new google.maps.Map(document.getElementById($(this).attr('id')), mapOptions);
+  pointArray = new google.maps.MVCArray(taxiData);
+  heatmap = new google.maps.visualization.HeatmapLayer({data: pointArray});
+  heatmap.setMap(map);
+  setGradient();
+  setLegendGradient();
+  setLegendLabels();
+})
+  /*map1 = new google.maps.Map(document.getElementById('map1'), mapOptions);
+
+  pointArray1 = new google.maps.MVCArray(taxiData);
+
+  heatmap1 = new google.maps.visualization.HeatmapLayer({data: pointArray1});
+
+  heatmap1.setMap(map1);*/
+  
+}
+
+function setGradient() {
+  gradient = [
+    'rgba(255,67,70, 0)',
+    'rgba(242, 85, 67, 1)',
+    'rgba(229, 104, 64,1)',
+    'rgba(216, 123, 61,1)',
+    'rgba(204, 141, 59,1)',
+    'rgba(191, 160, 56,1)',
+    'rgba(178, 179, 53,1)',
+    'rgba(166, 197, 51,1)',
+    'rgba(153, 216, 48,1)',
+    'rgba(140, 235, 45,1)',    
+    'rgba(128,254,43, 1)'
+  ]
+  heatmap.set('gradient', gradient);
+}
+
+function setLegendGradient() {
+    var gradientCss = '(left';
+    for (var i = 0; i < gradient.length; ++i) {
+        gradientCss += ', ' + gradient[i];
+    }
+    gradientCss += ')';
+    
+    $('.legendGradient-area').css('background', '-webkit-linear-gradient' + gradientCss);
+    $('.legendGradient-area').css('background', '-moz-linear-gradient' + gradientCss);
+    $('.legendGradient-area').css('background', '-o-linear-gradient' + gradientCss);
+    $('.legendGradient-area').css('background', 'linear-gradient' + gradientCss);
+}
+
+function setLegendLabels() {
+    google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
+        var maxIntensity = heatmap['gm_bindings_']['data'][158]['kd']['D'];
+        var legendWidth = $('.legendGradient-area').outerWidth();
+        
+        for (var i = 0; i <= maxIntensity; ++i) {
+            var offset = i * legendWidth / maxIntensity;
+            if (i > 0 && i < maxIntensity) {
+                offset -= 0.5;
+            } else if (i == maxIntensity) {
+                offset -= 1;
+            }
+            
+            $('.legend-area').append($('<div>').css({
+                'position': 'absolute',
+                'left': offset + 'px',
+                'top': '15px',
+                'width': '1px',
+                'height': '3px',
+                'background': 'black'
+            }).html(i));
+        }
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+ 
+
+
+})
+
+
+ </script>
+</body>
+</html>

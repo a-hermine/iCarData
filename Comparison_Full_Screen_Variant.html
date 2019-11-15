@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Comparison Full Screen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main_test.css">
+		<link rel="stylesheet" href="css/chart_depreciation_variant.css">
+		<link rel="stylesheet" href="css/Comparison_Full_Screen.css">
+		<link rel="stylesheet" href="css/charts.css">
+
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<!--  AngularJs -->
+		<!-- <script src="js/angular.min.js"></script> -->
+    	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://rawgithub.com/phpepe/highcharts-regression/master/highcharts-regression.js">
+		</script>
+
+		
+
+	
+		
+</head>
+<body ng-app="myModule">
+		<div class="conatiner-fluid navBarCharts">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+			<div class="row">
+				<nav class="navbar">
+				  	<div class="container-fluid">
+				    	<div class="navbar-header">
+						    
+				      		<a class="navbar-brand" href="#"><img src="img/iCarDataDark.png" alt=""></a>
+				    	</div>
+				    	<div class="navbar-collapse pull-right" id="myNavbar">
+<div class="empaty-small"></div>
+						    <ul class="nav navbar-nav pull-right">
+						        <li><a href="#">Get Apps</a></li>
+						        <li>
+							        <!-- Large modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Buy Plans</button>
+								</li>
+<!-- modal window -->
+<div class="modal fade bs-example-modal-lg modalWindow" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg popUp" role="document">
+    <div class="modal-content ourPlans">
+      	<div class="modal-header">
+<!-- <div class="empaty-large"></div> -->
+			 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<div class="row">
+<div class="empaty-medium"></div>
+<!-- <div class="empaty-large"></div> -->
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md -offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2" style= "margin-top: -10%">
+					<h1 class="text-center">Our Plans</h1>
+					<h4 class="text-center">Choose what suits your business needs best.</h4>
+<div class="clear"></div>
+				</div>
+<div class="clear"></div>
+			</div>
+<div class="clear"></div>
+        </div>
+        <div class="modal-body">		
+<!-- <div class="empaty-large"></div>
+<div class="empaty-large"></div> -->
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="row"> 
+						<div class="col-md-4 col-sm-4 col-xs-6  payPer">
+<div class="empaty-large"></div>
+							<h3>Pay per API Call</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$100<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Pay on demand when you make request to our API</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+						<div class="col-md-4  col-sm-4 col-xs-6   annualSubscribe">
+<div class="empaty-large"></div>
+							<h3>Annual Subscription</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$200<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Make as many API requests as you want without limits</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+<div class="empaty-large"></div>
+
+		</div>
+<div class="empaty-medium"></div>	
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h4 class="text-center">
+						We work with Banks, Insurance Companies, Manufacturers, Press, Investors  providing them with actionable information that changes the way they do business.
+					</h4>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+					<button type="button" class="btn btn-default mainButton">TRY DEMO VERSION</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+						        <li><a href="#">Feedback</a></li> 
+						        <li><a href="#">Need Help?</a></li> 
+						        <li><a href="#" style="padding-right: 0;padding-top: 0"><img src="img/Functional/UserImage.png" alt="user img"> </a> </li> 
+						        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Sttau</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+   <ul class="dropdown-menu profileInfo">
+  	<div class="arrow"></div>
+	    <li><a href="profile.html">My Profile</a></li>
+	    <li><a href="profile_s.html">Choose Plan</a></li>
+	    <li><a href="profile_s.html">Payment Method</a></li>
+	    <li><a href="#">Log Out</a></li>
+<div class="clear"></div>
+						    </ul>
+				    	</div>				     
+				  	</div>
+				</nav>
+			</div>
+<div class="empaty-large"></div>
+			
+<div class="empaty-small"></div>
+
+			</div>
+		</div>
+
+<div class="empaty-small"></div> 
+
+	<div class="container-fluid makeModel" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12  col-md-12 col-sm-12 col-sm-12" >
+					<div class="row variantDiv">
+						<div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-4 chartsPart">
+							<div class="detailsCompair">
+								<div class="backDashboard">
+									<figure class="pull-left">
+										<img src="img\Functional/leftArrow.png" alt="">
+									</figure>
+									<p class="text-center"><a href="chart_depreciation_model.html">Back to Depreciation</a></p>
+								</div>
+								<div class="selectedVariant noneEdit">
+									<span class="modelCh">Choose Model:</span>
+									<select class="selectArrow" name="model" id="chooseModelByVariant2">
+										<option value=""></option>
+									</select>
+
+									<span class="variantCh">Choose Variant:</span>
+									<select class="selectArrow" name="variant" id="chooseVariantByVariant2">
+										<option value=""></option>
+									</select>
+
+									<span class="yearCh">Choose Year:</span>
+									<select class="selectArrow" name="year" id="chooseYearByVariant2">
+										<option value=""></option>
+									</select>
+
+									<button>COMPARE THIS CAR</button>
+								</div>
+								<p class="text-left secondP">Depreciation of <u>Audi A4 TSFI</u></p>
+								<table class="table">
+									<tr>
+										<th>Year
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Demand Price
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Depreciation Rate
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+									</tr>
+									<tr>
+											<td>2014</td>
+											<td>RM 223,000</td>
+											<td>76,300 - 11% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2013</td>
+											<td>RM 180,000</td>
+											<td>67,210 - 12%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 200,000</td>
+											<td>34,310 - 65% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2017</td>
+											<td>RM 750,000</td>
+											<td>10,840 - 11%
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 550,000</td>
+											<td>23,420 - 33%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+								</table>
+							</div>
+						</div>
+						<div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-4 chartsPart comparison">
+							<p class="text-center">
+								<u>Depreciation</u> Comparison <u>Over Time</u>
+							</p>
+								
+								<div class="selectedVariant">
+									<span class="modelCh">Choose Model:</span>
+									<select class="selectArrow" name="model" id="chooseModelByVariant3">
+										<option value="Please Select">Please Select</option>
+										<option value="Model 1">Model 1</option>
+										<option value="Model 2">Model 2</option>
+										<option value="Model 3">Model 3</option>
+									</select>
+
+									<span class="variantCh">Choose Variant:</span>
+									<select class="selectArrow" name="variant" id="chooseVariantByVariant3">
+										<option value="Please Select">Please Select</option>
+										<option value="Variant 1">Variant 1</option>
+										<option value="Variant 2">Variant 2</option>
+										<option value="Variant 3">Variant 3</option>
+									</select>
+
+									<span class="yearCh">Choose Year:</span>
+									<select class="selectArrow" name="year" id="chooseYearByYear3">
+										<option value="Please Select">Please Select</option>
+										<option value="Year 1">Year 1</option>
+										<option value="Year 2">Year 2</option>
+										<option value="Year 3">Year 3</option>
+									</select>
+
+									<button class="openFirst">COMPARE THIS CAR</button>
+								</div>
+							<p class="text-left secondP hiddenPFirst">Depreciation of <u>Audi A4 Quattro</u></p>
+								<table class="table compareHideTableFirst">
+									<tr>
+										<th>Year
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Demand Price
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Depreciation Rate
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+									</tr>
+									<tr>
+											<td>2014</td>
+											<td>RM 223,000</td>
+											<td>76,300 - 11% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2013</td>
+											<td>RM 180,000</td>
+											<td>67,210 - 12%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 200,000</td>
+											<td>34,310 - 65% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2017</td>
+											<td>RM 750,000</td>
+											<td>10,840 - 11%
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 550,000</td>
+											<td>23,420 - 33%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+								</table>
+							</div>
+							<div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-4 chartsPart addCar">
+							<h5>Add Car to Compare</h5>
+								<div class="pull-right detailsCompair">
+									<img src="img\Icons\Dashboard/add.png" alt="">
+									<img src="img\Icons\Dashboard/question.png" alt="">
+									<img src="img\Icons\Dashboard/export.png" alt="">
+								</div>
+								<div class="selectedVariant">
+									<span class="modelCh">Choose Model:</span>
+									<select class="selectArrow" name="model" id="chooseModelByModel4">
+										<option value="Please Select">Please Select</option>
+										<option value="Model 1">Model 1</option>
+										<option value="Model 2">Model 2</option>
+										<option value="Model 3">Model 3</option>
+									</select>
+
+									<span class="variantCh">Choose Variant:</span>
+									<select class="selectArrow" name="variant" id="chooseVariantByModel4">
+										<option value="Please Select">Please Select</option>
+										<option value="Variant 1">Variant 1</option>
+										<option value="Variant 2">Variant 2</option>
+										<option value="Variant 3">Variant 3</option>
+									</select>
+
+									<span class="yearCh">Choose Year:</span>
+									<select class="selectArrow" name="year" id="chooseYearByModel4">
+										<option value="Please Select">Please Select</option>
+										<option value="Year 1">Year 1</option>
+										<option value="Year 2">Year 2</option>
+										<option value="Year 3">Year 3</option>
+									</select>
+
+									<button class="openSecond">COMPARE THIS CAR</button>
+								</div>
+							<p class="text-left secondP hiddenPSecond">Depreciation of <u>Audi A4 Quattro</u></p>
+								<table class="table compareHideTableSecond">
+									<tr>
+										<th>Year
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Demand Price
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Depreciation Rate
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+									</tr>
+									<tr>
+											<td>2014</td>
+											<td>RM 223,000</td>
+											<td>76,300 - 11% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2013</td>
+											<td>RM 180,000</td>
+											<td>67,210 - 12%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 200,000</td>
+											<td>34,310 - 65% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2017</td>
+											<td>RM 750,000</td>
+											<td>10,840 - 11%
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 550,000</td>
+											<td>23,420 - 33%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+								</table>
+							</div>
+						<div class="clear"></div>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid makeDecisions">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-offset-xs-2">
+						<h2>Make smarter decisions today.</h2>
+					</div>
+				</div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  message">
+									<input type="name" class="form-control pull-left" id="exampleInputEmail3" placeholder="Name">
+									<input type="company" class="form-control pull-left" id="exampleInputEmail3" placeholder="Company">
+									<input type="email" class="form-control pull-left" id="exampleInputEmail3" placeholder="Email">
+									<textarea class="form-control" rows="5" placeholder="New Message"></textarea>
+									<div>
+										<img src="img/Functional/SendEmail.png" alt="sent message">
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 lightLogo">
+								<a class="navbar-brand" href="#"><img src="img/iCarDataLight.png" alt="Logo Light" ></a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>FEATURES</p>
+								<ul>
+									<li><a href="#">Depreciation</a></li>
+									<li><a href="#">Supply &Demand
+									</a></li>
+									<li><a href="#">Ranking
+									</a></li>
+									<li><a href="#">Geolocation</a></li>
+									<li><a href="#">Market Price</a> </li>
+								</ul>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>COMPANY</p>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Press Room</a></li>
+									<li><a href="#">Investor Relations</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>RESOURCES</p>
+								<ul>
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Personal Data Protection</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div>
+<div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 copy-right">
+						
+					</div>
+					<div class="col-lg-4 col-lg-offset-4 col-md-6  col-sm-6  col-xs-4 col-xs-offset-4  conditions">
+						<p ><a href="">Terms & Conditions·  Privacy Policy</a></p>
+					</div>
+				</div>
+<div class="empaty-large"></div>
+			</div>
+		</div>
+		
+
+	
+  <script src="js/script_search.js"></script> 
+ <script>
+    $(document).ready(function(){
+        /*date and copy right*/
+  		var date=new Date(),
+        year = date.getFullYear(),
+       	text = "Copyright " + year + " iCarData.com. All rights reserved.";
+	        
+        $('.copy-right').html('<p class="text-align-left">' + text + '</p>');
+        /*choose subscribe method*/
+
+		$('.payPer').on('click', function(){
+		    $('.annualSubscribe.activePayAnnual').removeClass('activePayAnnual');
+		    $(this).addClass('activePayAnnual');
+		});
+
+	    $('.annualSubscribe').on('click', function(){
+			$('.payPer.activePayAnnual').removeClass('activePayAnnual');
+			$(this).addClass('activePayAnnual');
+		});
+
+        /*select model*/
+		$('.selectModel').on('click', function(){
+			$('.selectvar.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+	    $('.selectVariant').on('click', function(){
+			$('.selectModel.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+	    $('.openFirst').on('click', function(){
+	    	$('.hiddenPFirst').css('display', 'block');
+	    	$('.compareHideTableFirst').css('display', 'block');
+
+		})
+		$('.openSecond').on('click', function(){
+		    $('.hiddenPSecond').css('display', 'block');
+		    $('.compareHideTableSecond').css('display', 'block');
+		})
+
+})
+
+
+
+ </script>
+</body>
+</html>

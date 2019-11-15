@@ -1,0 +1,299 @@
+.navbar-brand{
+	padding: 15px 36px;
+}
+.makeModel{
+	margin-bottom: 10%;
+}
+.chartsDepreciation table tr th{
+	font-size: 13px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.chartsDepreciation table tr td{
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.depreciationTable img{
+	margin-left: 8%;
+}
+.depreciationTable tr:nth-child(2) td{
+	padding: 14px 8px!important;
+}
+.charts div:nth-child(1){
+	border-radius: 4px 0 0 4px;
+}
+.selectMV{
+	border: solid 1px #403e5b!important;
+	cursor: pointer;
+}
+.selectVariant{
+	border: solid 1px #403e5b!important;
+	opacity: 1!important;
+}
+.selectModel:hover, .selectVariant:hover{
+	border: solid 1px #403e5b!important;
+}
+.selectModel:hover h4, .selectVariant:hover h4{
+	opacity: 1!important;
+}
+.charts div:nth-child(2){
+	border-radius: 0 4px  4px 0;
+}
+.clear{
+	clear: both;
+}
+.charts:nth-child(2){
+	margin-left: 0;
+	margin-right: 0;
+}
+.variantDiv{
+	margin-left: 0;
+	margin-right: 0;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05); 
+}
+.variantDiv .chartsPart{
+	box-shadow: none;
+}
+
+.charts:nth-child(2) .chartsPart{
+	padding: 0!important;
+	box-shadow: none;
+	border:  solid 1px rgba(64, 62, 91, 0.25);
+	
+}
+.charts:nth-child(2) .chartsPart h4{
+	font-size: 17px!important;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProMedium';
+}
+.selectModel{
+	opacity: 0.5;
+
+}
+.variantDiv .chartsPart{
+	padding-top: 4%;
+
+}
+.variantDiv{
+	margin-top: 4%;
+	border-radius: 10px;
+}
+.variantDiv h5{
+	display: inline;
+	font-size: 15px;
+	font-family: 'AvenirNextLTProRegular';
+	margin-left: 18%;
+}
+.chartsPart{
+	position: relative;
+}
+.detailsV{
+	position: absolute;
+    top: 5.5%;
+    left: 74%;
+    z-index: 999;
+}
+.detailsV img:nth-child(1){
+	margin-right: 10px;
+}
+.chartsPart p{
+	font-size: 17px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProMedium';
+}
+.selectedVariant{
+	position: relative;
+}
+.selectedVariant span{
+	position: absolute;
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.modelCh{
+    top: 4%;
+    left: 7%;
+}
+.variantCh{
+    left: 7%;
+    top: 31%;
+}
+.yearCh{
+    left: 7%;
+    top: 59%;
+
+}
+.compareHideTable, .hiddenP{
+	display: none;
+}
+.selectedVariant select{
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 57%;
+    font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.selectedVariant button{
+	border-radius: 2px;
+	background-color: #009c63;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+	letter-spacing: 1px;
+ 	color: #ffffff;
+ 	font-family: 'AvenirNextLTProRegular';
+}
+.selectedVariant{
+	margin-top: 15.2%;
+}
+.noneEdit{
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.detailsCompair{
+	margin-left: 3%;
+}
+.detailsCompair:nth-child(2){
+	width:35%;
+}
+.detailsCompair:nth-child(2) img{
+	margin-left: 10px;
+}
+.compareImg, .compareImgVariant{
+	cursor: pointer;
+}
+/* .selectedVariant:nth-child(4){
+	margin-top: 14%;	
+	opacity: 1;
+} */
+.variantDiv .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	padding: 14px 8px!important;
+}
+.chartsPart table tr th{
+	font-size: 13px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+	border-top: none;
+	border-bottom: none;
+	padding:  16px 8px!important;
+	opacity: 0.7;
+}
+.chartsPart table tr td{
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.firstRow td{
+	border-top: none!important;
+}
+.chartsPart table tr td i{
+	padding-left: 8%;
+	cursor: pointer;
+}
+.secondP{
+	margin-top: 60px;
+	margin-left: 2%;
+}
+.selectArrow {
+	background:url(../img/Icons/Profile/arrow.png) ;
+	background-position:calc(95%);
+  	-webkit-appearance: none;
+	background-repeat: no-repeat;
+}
+
+.selectArrow:focus {
+	background:url(../img/Icons/Profile/arrow.png) ;
+	background-position:calc(95%);
+  	-webkit-appearance: none;
+	background-repeat: no-repeat;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.detailsCompair:nth-child(2) {
+    	width: 44%;
+	}
+	.detailsCompair:nth-child(2) img {
+    	margin-left: 7px;
+	}
+	.addCar{
+		padding-top: 4.7%!important;
+	}
+
+	.table>tbody>tr>td{
+		padding: 10px;
+	}
+	.variantDiv .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+		padding: 14px 4px!important;
+	}
+	.table>tbody:first-child>tr>th{
+		padding: 14px;
+	}
+	.chartsPart table tr th{
+		padding: 23px 0px!important;
+	}
+	.chartsPart table tr td i{
+		padding-left: 5%;
+	}
+	.detailsV img:nth-child(1) {
+    	margin-right: 3px;
+    	margin-left: 13px;
+	}
+	.detailsCompair p{
+		text-align: center!important;
+	}
+	.selectOptions select{
+		width: 31%;
+	}
+	.selectOptions button{
+		width: 31%;
+	}
+	.variantDiv h5{
+		margin-left: -1%;
+	}
+	.selectedVariant:nth-child(3){
+		margin-top: 24%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.addCar .detailsCompair:nth-child(2) img:nth-child(1) {
+    	margin-left: 0px!important;
+	}
+	.table>tbody:first-child>tr>th{
+		padding: 5px!important;
+	}
+	#myNavbar ul li a {
+    	padding: 8px 10px!important;
+	}
+	#myNavbar li a img{
+	    margin-top: -15%;
+	} 
+	.variantDiv h5{
+		margin-left: 15%!important;
+	}
+	.selectOptions select{
+		width: 31%;
+	}
+	.selectOptions button{
+		width: 31%;
+	} 
+	.navbar-brand{
+	    padding: 15px 4px;
+	}
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.detailsCompair:nth-child(2) {
+    	width: 34%;
+	}
+	.selectedVariant:nth-child(3){
+		margin-top: 9%;
+	}
+}
+

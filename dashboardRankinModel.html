@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard Raking Variant</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main_test.css">
+		<link rel="stylesheet" href="css/charts.css">
+		<!-- <link rel="stylesheet" href="css/chart_depreciation_variant.css"> -->
+	<link rel="stylesheet" href="css/chart_depreciation_variant_arrow.css">
+	<link rel="stylesheet" href="css/dashboardRankin.css">
+
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<!--  AngularJs -->
+		<!-- <script src="js/angular.min.js"></script> -->
+    	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://rawgithub.com/phpepe/highcharts-regression/master/highcharts-regression.js">
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+ 
+		<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+	
+		
+</head>
+<body ng-app="myModule">
+		<div class="conatiner-fluid navBarCharts">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+			<div class="row">
+				<nav class="navbar">
+				  	<div class="container-fluid">
+				    	<div class="navbar-header">
+						    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span> 
+						    </button> -->
+				      		<a class="navbar-brand" href="#"><img src="img/iCarDataDark.png" alt=""></a>
+				    	</div>
+				    	<div class="navbar-collapse pull-right" id="myNavbar">
+<div class="empaty-small"></div>
+						    <ul class="nav navbar-nav pull-right">
+						        <li><a href="#">Get Apps</a></li>
+						        <li>
+							        <!-- Large modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Buy Plans</button>
+								</li>
+<!-- modal window -->
+<div class="modal fade bs-example-modal-lg modalWindow" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg popUp" role="document">
+    <div class="modal-content ourPlans">
+      	<div class="modal-header">
+<!-- <div class="empaty-large"></div> -->
+			 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<div class="row">
+<div class="empaty-medium"></div>
+<!-- <div class="empaty-large"></div> -->
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md -offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2" style= "margin-top: -10%">
+					<h1 class="text-center">Our Plans</h1>
+					<h4 class="text-center">Choose what suits your business needs best.</h4>
+<div class="clear"></div>
+				</div>
+<div class="clear"></div>
+			</div>
+<div class="clear"></div>
+        </div>
+        <div class="modal-body">		
+<!-- <div class="empaty-large"></div>
+<div class="empaty-large"></div> -->
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="row"> 
+						<div class="col-md-4 col-sm-4 col-xs-6  payPer">
+<div class="empaty-large"></div>
+							<h3>Pay per API Call</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$100<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Pay on demand when you make request to our API</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+						<div class="col-md-4  col-sm-4 col-xs-6   annualSubscribe">
+<div class="empaty-large"></div>
+							<h3>Annual Subscription</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$200<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Make as many API requests as you want without limits</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+<div class="empaty-large"></div>
+
+		</div>
+<div class="empaty-medium"></div>	
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h4 class="text-center">
+						We work with Banks, Insurance Companies, Manufacturers, Press, Investors  providing them with actionable information that changes the way they do business.
+					</h4>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+					<button type="button" class="btn btn-default mainButton">TRY DEMO VERSION</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+						        <li><a href="#">Feedback</a></li> 
+						        <li><a href="#">Need Help?</a></li> 
+						        <li><a href="#" style="padding-right: 0;padding-top: 0"><img src="img/Functional/UserImage.png" alt="user img"> </a> </li> 
+						        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Sttau</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+   <ul class="dropdown-menu profileInfo">
+  	<div class="arrow"></div>
+	    <li><a href="profile.html">My Profile</a></li>
+	    <li><a href="profile_s.html">Choose Plan</a></li>
+	    <li><a href="profile_s.html">Payment Method</a></li>
+	    <li><a href="#">Log Out</a></li>
+<div class="clear"></div>
+  	</ul>
+</div>
+						    </ul>
+				    	</div>				     
+				  	</div>
+				</nav>
+			</div>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+			
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+
+		</div>
+	</div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div> 
+<div class="empaty-small"></div> 
+	<div class="container-fluid makeModel" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12" >
+					<div class="searchModel">
+						<input type="text" id="search-criteria"  placeholder="Search reports" ng-model="searchText.name">
+						<i class="fa fa-search " aria-hidden="true"></i>
+					</div>
+<div class="empaty-large"></div>	
+					<div class="panel-group sideBar" id="accordion"   role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title homePage">
+									<figure>
+										<img src="img\Icons\Dashboard\Menu/home1.png" alt="home">
+									</figure> 
+							        <a role="button" class="" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Home
+							        </a>
+							    </h4>
+							</div>
+						</div>
+						  	<div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      	<h4 class="panel-title">
+							      		<figure>
+											<img src="img\Icons\Dashboard\Menu/depreciation1.png" alt="Depreciation">
+										</figure> 
+							        	<a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          		Depreciation
+							        	</a>
+							      	</h4>
+							    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      	<div class="panel-body">
+									<a href="chart_depreciation_model.html" class="chartsMenuActive">- Depreciation by Model</a>
+<div class="empaty-small"></div>
+									<a href="chart_depreciation_variant.html">- Depreciation by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img\Icons\Dashboard\Menu/supplydemand1.png" alt="supply&demand">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          		Supply & Demand
+						        	</a>
+						      	</h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      	<div class="panel-body">
+									<a href="Dashboard_Supply&Demand.html">- Supply & Demand by Model</a>   
+<div class="empaty-small"></div>
+									<a href="Dashboard_Supply&Demand.html">- Supply & Demand by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title rankinPage">
+						      		<figure>
+										<img src="img\Icons\Dashboard\Menu/ranking2.png" alt="Raking">
+									</figure> 
+						        	<a class="collapsed chartsMenuActive" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Raking
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title geolocationPage">
+						      		<figure>
+										<img src="img\Icons\Dashboard\Menu/geolocation1.png" alt="geolocation">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse"  aria-expanded="false">
+						          		Geolocation
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title marketPricePage">
+						      		<figure>
+										<img src="img\Icons\Dashboard\Menu/marketprice1.png" alt="market price">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Market Price
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12" >
+					<nav class="navbar" style="margin-bottom: 30px">
+					    <ul class="nav navbar-nav pull-right select-menu">
+					        <li class="makeLi activCarChoose"><a href="#">Make</a></li>
+					        <li class="modelLi disabled"><a href="#">Model</a></li>
+					        <li class="variantLi disabled"><a href="#">Variant</a></li> 
+					        <li class="yearLi disabled"><a href="#">Year</a> </li> 
+					        <li class="territoryLi disabled"><a href="#">Territory</a> </li> 
+					    </ul>
+					</nav>
+					<div class="row makeDiv">
+						<div class="col-lg-12">
+							<div class="make">
+								<input type="text" placeholder="Search make" class="pull-left" id="search-criteria-menu">	
+								<div class="clear"></div>
+								<i class="fa fa-search" aria-hidden="true"></i>
+								<ul></ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row selectedItems">
+						<div class="col-lg-12 col-md-12">
+							<div class="applied">
+								<p class="selectApplied">
+									<img src="img\Icons\Dashboard\Filter/selected.png" alt="">Applied:
+								</p>
+								<p class="car">
+									<img src="img\Icons\Dashboard\Filter/car.png" alt="">
+									<span class="spanMake"></span>
+									<span class="spanModel"></span>
+									<span class="spanVariant"></span>
+								</p>
+								<p class="year">
+									<img src="img\Icons\Dashboard\Filter/year.png" alt="">
+									<span></span>
+								</p>
+								<p class="territory">
+									<img src="img\Icons\Dashboard\Filter/territory.png" alt="">
+									<span></span>
+								</p>
+								<button>CHANGE</button>
+<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							
+							<div class="selectOptions">
+								<span class="firstMake">Make:</span>
+								<select name="make" id="makeAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="firstVariant">Variant:</span>
+								<select name="variant" id="variantAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="firstTerritory">Territory:</span>
+								<select name="territory" id="territoryAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="secondModel">Model</span>
+								<select name="model" id="modelAuto" value="select" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="secondYear">Year</span>
+								<select name="year" id="yearAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+								<button class = "btn btn-default">APPLY FILTER</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row charts chartsDepreciation" >
+						<div class="col-lg-12 col-md-12 co-sm-12 col-xs-12">
+							<div>
+								<div class="chartsPart">
+										<h3 class="text-left"><u>Ranking</u> of <u>all Makes</u></h3>
+									<div class=" rakingMakes">
+										<button class="fullScreen"><a href="">More Details</a></button>
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+<div class="clear"></div>
+									</div>
+									
+<div class="empaty-small"></div>								
+<div class="clear"></div>
+								<div class="rakingByPlace row">
+									<div class="rakingByPlaceDiv">
+										<p>
+											<span>Audi A4 TSFI</span>
+											<span>Year - 2014</span>
+										</p>
+										<p>
+											<span>+10%</span>
+											<span>5th place</span>
+										</p>
+<div class="clear"></div>
+									</div>
+									<div class="rakingByPlaceDiv">
+										<p>
+											<span>BMW i8 ABC</span>
+											<span>Year - 2014</span>
+										</p>
+										<p>
+											<span>+5.8%</span>
+											<span>1st place</span>
+										</p>
+<div class="clear"></div>
+									</div>
+									<div class="rakingByPlaceDiv">
+										<p>
+											<span>Honda Civic XY</span>
+											<span>Year - 2014</span>
+										</p>
+										<p>
+											<span>-10.1%</span>
+											<span>2nd place</span>
+										</p>
+<div class="clear"></div>
+									</div>
+<div class="clear"></div>
+								</div>
+
+<div class="clear"></div>
+								</div>
+								
+								<div class="row charts">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingByModel">
+										<div>
+											<h4 class="text-center">Ranking of other Audi Models</h4>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingByVariant">
+										<div>
+											<h4 class="text-center">Ranking of other Audi A4 Variants</h4>
+										</div>
+									</div>
+									<div class="clear"></div>	
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartLeft">
+							<div class="pull-right  detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant1 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi A4</u></p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartRight">
+							<div class="pull-right detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant2 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi A5</u> </p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+<div class="clear"></div>
+										</div>
+									</div>
+							</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+
+
+
+
+
+										<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartLeft">
+							<div class="pull-right  detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant1 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi A6</u></p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartRight">
+							<div class="pull-right detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant2 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi A7</u> </p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+<div class="clear"></div>
+										</div>
+									</div>
+							</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+								
+						
+				
+									<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartLeft">
+							<div class="pull-right  detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant1 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi Q3</u></p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartRight">
+							<div class="pull-right detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant2 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi Q5</u> </p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+<div class="clear"></div>
+										</div>
+									</div>
+							</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			
+								<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartLeft">
+							<div class="pull-right  detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant1 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi R8</u></p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingPartRight">
+							<div class="pull-right detailsV">
+								<img src="img\Icons\Dashboard/question.png" alt="">
+								<img src="img\Icons\Dashboard/export.png" alt="">
+							</div>
+							<div id="DepreciationOfVariant2 raking">
+								<div class="makeRanking">
+										<p>Ranking of <u>Audi RS</u> </p>
+										
+										<div>
+											<button>
+												<p class="pull-left">2014</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15% <span style="visibility: hidden;">sdfgsd</span>  5th place</span>
+											</button>
+											<button>
+												<p class="pull-left">2013</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+10.5% <span style="visibility: hidden;">sdfgsd</span>  1st place</span>
+											</button>
+											<button>
+												<p class="pull-left">2012</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+2.7% <span style="visibility: hidden;">sdfgsd</span>  2nd place</span>
+											</button>
+											<button>
+												<p class="pull-left">2011</p> 
+												<span class="middlSpan"></span>
+												<span class="pull-right">+15.6% <span style="visibility: hidden;">sdfgsd</span>  3rd place</span>
+											</button>
+											<button class="showButton">Show more</button>
+<div class="clear"></div>
+										</div>
+									</div>
+							</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				</div>			
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid makeDecisions">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-offset-xs-2">
+						<h2>Make smarter decisions today.</h2>
+					</div>
+				</div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  message">
+									<input type="name" class="form-control pull-left" id="exampleInputEmail3" placeholder="Name">
+									<input type="company" class="form-control pull-left" id="exampleInputEmail3" placeholder="Company">
+									<input type="email" class="form-control pull-left" id="exampleInputEmail3" placeholder="Email">
+									<textarea class="form-control" rows="5" placeholder="New Message"></textarea>
+									<div>
+										<img src="img/Functional/SendEmail.png" alt="sent message">
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 lightLogo">
+								<a class="navbar-brand" href="#"><img src="img/iCarDataLight.png" alt="Logo Light" ></a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>FEATURES</p>
+								<ul>
+									<li><a href="#">Depreciation</a></li>
+									<li><a href="#">Supply &Demand
+									</a></li>
+									<li><a href="#">Ranking
+									</a></li>
+									<li><a href="#">Geolocation</a></li>
+									<li><a href="#">Market Price</a> </li>
+								</ul>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>COMPANY</p>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Press Room</a></li>
+									<li><a href="#">Investor Relations</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>RESOURCES</p>
+								<ul>
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Personal Data Protection</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div>
+<div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 copy-right">
+						
+					</div>
+					<div class="col-lg-4 col-lg-offset-4 col-md-6  col-sm-6  col-xs-4 col-xs-offset-4  conditions">
+						<p ><a href="">Terms & Conditions·  Privacy Policy</a></p>
+					</div>
+				</div>
+<div class="empaty-large"></div>
+			</div>
+		</div>
+		
+
+	
+  <script src="js/script_search.js"></script> 
+ <script>
+    $(document).ready(function(){
+        /*date and copy right*/
+  		var date=new Date(),
+        year = date.getFullYear(),
+       	text = "Copyright " + year + " iCarData.com. All rights reserved.";
+	        
+        $('.copy-right').html('<p class="text-align-left">' + text + '</p>');
+        /*choose subscribe method*/
+
+		$('.payPer').on('click', function(){
+		    $('.annualSubscribe.activePayAnnual').removeClass('activePayAnnual');
+		    $(this).addClass('activePayAnnual');
+		});
+
+	    $('.annualSubscribe').on('click', function(){
+			$('.payPer.activePayAnnual').removeClass('activePayAnnual');
+			$(this).addClass('activePayAnnual');
+		});
+
+        /*select model*/
+		$('.selectModel').on('click', function(){
+			$('.selectvar.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+	    $('.selectVariant').on('click', function(){
+			$('.selectModel.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+ 
+
+
+
+})
+
+
+
+ </script>
+</body>
+</html>

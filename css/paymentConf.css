@@ -1,0 +1,141 @@
+#paymentMethodFrame{
+	display: block!important;
+}
+.backPlan p{
+	margin-top: 30px;
+ 	opacity: 0.5;
+ 	margin-right: 40px;
+	
+}
+.backPlan p a{
+	font-size: 17px;
+	color: #403e5b;
+	margin-left: 5%;
+}
+.confText h5{
+	margin-left: 40px;
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+	margin-bottom: 20px;
+}
+.agreement h5{
+	margin-left: 40px;
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProMedium';
+	margin-top: 46px;
+}
+#choosePlan h2{
+	margin-left: 3%!important;
+}
+#btnNewPlan{
+    padding: 11px 46.4px!important;
+
+}
+
+.personalInformation hr{
+	margin-top: 50px!important;
+}
+.agreement .btns-newPlans{
+    margin-left: -9px;
+}
+.btns-newPlans div p{
+	display: inline;
+	float: left;
+    margin-top: 9px;
+    margin-right: 30px;
+    padding-left: 0!important;
+}
+.btns-newPlans div figure{
+	display: inline;
+	float: left;
+    margin-top: 4%;
+}
+.btns-newPlans div p a{
+	font-size: 17px;
+	color: #403e5b;
+	opacity: 0.5;
+	font-family: 'AvenirNextLTProMedium';
+}
+.btns-newPlans div p i{
+	opacity: 0.5;
+}
+.btns-newPlans div button{
+	display: inline;
+	float: right;
+}
+.btns-newPlans div p a{
+	padding-left: 10px;
+}
+#paymentMethodFrame{
+    margin-right: 19px!important;
+    margin-left: 15px!important;
+}
+
+
+/* payment Sucess */
+
+.paymentSuccess .backPlan h5{
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+	text-align: center;
+}
+.paymentSuccess .backPlan h4{
+	margin-left: 0!important;
+}
+
+.paymentSuccess #btnNewPlan{
+	display: block;
+	margin: 0 auto!important;
+	padding: 11px 14.4px!important;
+}
+
+/* Sign Up Success */
+
+.signUpSuccess h2{
+	font-size: 32px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProMedium';
+}
+.signUpSuccess h4{
+	font-size: 20px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.paymentSuccess .agreement h6>a{
+	font-size: 13px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.paymentSuccess .agreement .btns-newPlans #btnNewPlan{
+	margin: 0 auto!important;
+    padding: 11px 46.4px!important;
+}
+.paymentSuccess .agreement .btns-newPlans{
+	margin-left: 0!important;
+}	
+ 
+@media (min-width: 992px) and (max-width: 1199px){
+	.backDashboard figure{
+		margin-left: -3%!important;
+	}
+	.backgroundImg figure{
+		margin-right: 10%!important;
+	}
+	.borderDiv span{
+		vertical-align: middle;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.backDashboard figure{
+		margin-left: 0%!important;
+	}
+	
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.btnDiv button {
+	    margin-right: 0!important;
+	}
+}

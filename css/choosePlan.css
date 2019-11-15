@@ -1,0 +1,55 @@
+
+#choosePlanFrame{
+	display: block!important;
+}
+.clear{
+	clear: both;
+}
+.choosePlanB{
+	margin: 0 26px!important;
+}
+.choosePlan h2 {
+	margin-left: 7%!important;
+}
+.backProfile p {
+	margin-top: 17px;
+ 	opacity: 0.5;
+ 	margin-right: 40px;
+ 	margin-bottom: 20px;
+
+}
+.backProfile p a{
+	font-size: 17px;
+	color: #403e5b;
+	margin-left: 5%;
+}
+.choosePlanB button{
+	width: 84%;
+}
+.annualSubLarge{
+	width: 96%;
+}
+.personalInformation h4{
+	margin-left: 7%;
+}
+.backgroundImg .col-lg-5{
+	border-right: none!important;
+}
+.choosePlanB button{
+	border: 1px solid #009c63!important;
+}
+
+@media (min-width: 375px) and (max-width: 767px){
+	.annualSubLarge{
+		width: 90%;
+		margin-left: 2%!important;
+	}
+	.backProfile p{
+	    margin-right: 53px;
+	}
+	.editDetails {
+    	margin-right: 53px;
+	}
+	
+
+}

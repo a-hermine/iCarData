@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard Supply & Demand</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main_test.css">
+		<link rel="stylesheet" href="css/charts.css">
+		<!-- <link rel="stylesheet" href="css/chart_depreciation_variant.css"> -->
+		<link rel="stylesheet" href="css/chart_depreciation_variant_arrow.css">
+		<link rel="stylesheet" href="css/dashboardRankin.css">
+		<link rel="stylesheet" href="css/Dashboard_Supply&Demand.css">
+
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<!--  AngularJs -->
+		<!-- <script src="js/angular.min.js"></script> -->
+    	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://rawgithub.com/phpepe/highcharts-regression/master/highcharts-regression.js">
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+ 
+		<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+	
+		
+</head>
+<body ng-app="myModule">
+		<div class="conatiner-fluid navBarCharts">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+			<div class="row">
+				<nav class="navbar">
+				  	<div class="container-fluid">
+				    	<div class="navbar-header">
+						    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span> 
+						    </button> -->
+				      		<a class="navbar-brand" href="#"><img src="img/iCarDataDark.png" alt=""></a>
+				    	</div>
+				    	<div class="navbar-collapse pull-right" id="myNavbar">
+<div class="empaty-small"></div>
+						    <ul class="nav navbar-nav pull-right">
+						        <li><a href="#">Get Apps</a></li>
+						        <li>
+							        <!-- Large modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Buy Plans</button>
+								</li>
+<!-- modal window -->
+<div class="modal fade bs-example-modal-lg modalWindow" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg popUp" role="document">
+    <div class="modal-content ourPlans">
+      	<div class="modal-header">
+<!-- <div class="empaty-large"></div> -->
+			 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<div class="row">
+<div class="empaty-medium"></div>
+<!-- <div class="empaty-large"></div> -->
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md -offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2" style= "margin-top: -10%">
+					<h1 class="text-center">Our Plans</h1>
+					<h4 class="text-center">Choose what suits your business needs best.</h4>
+<div class="clear"></div>
+				</div>
+<div class="clear"></div>
+			</div>
+<div class="clear"></div>
+        </div>
+        <div class="modal-body">		
+<!-- <div class="empaty-large"></div>
+<div class="empaty-large"></div> -->
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="row"> 
+						<div class="col-md-4 col-sm-4 col-xs-6  payPer">
+<div class="empaty-large"></div>
+							<h3>Pay per API Call</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$100<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Pay on demand when you make request to our API</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+						<div class="col-md-4  col-sm-4 col-xs-6   annualSubscribe">
+<div class="empaty-large"></div>
+							<h3>Annual Subscription</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$200<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Make as many API requests as you want without limits</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+<div class="empaty-large"></div>
+
+		</div>
+<div class="empaty-medium"></div>	
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h4 class="text-center">
+						We work with Banks, Insurance Companies, Manufacturers, Press, Investors  providing them with actionable information that changes the way they do business.
+					</h4>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+					<button type="button" class="btn btn-default mainButton">TRY DEMO VERSION</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+						        <li><a href="#">Feedback</a></li> 
+						        <li><a href="#">Need Help?</a></li> 
+						        <li><a href="#" style="padding-right: 0;padding-top: 0"><img src="img/Functional/UserImage.png" alt="user img"> </a> </li> 
+						        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Sttau</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+   <ul class="dropdown-menu profileInfo">
+  	<div class="arrow"></div>
+	    <li><a href="profile.html">My Profile</a></li>
+	    <li><a href="profile_s.html">Choose Plan</a></li>
+	    <li><a href="profile_s.html">Payment Method</a></li>
+	    <li><a href="#">Log Out</a></li>
+<div class="clear"></div>
+  	</ul>
+</div>
+						    </ul>
+				    	</div>				     
+				  	</div>
+				</nav>
+			</div>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+			
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+
+		</div>
+<div class="clear"></div>
+	</div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div> 
+<div class="empaty-small"></div> 
+	<div class="container-fluid makeModel" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12" >
+					<div class="searchModel">
+						<input type="text" id="search-criteria"  placeholder="Search reports" ng-model="searchText.name">
+						<i class="fa fa-search " aria-hidden="true"></i>
+					</div>
+<div class="empaty-large"></div>	
+					<div class="panel-group sideBar" id="accordion"   role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title homePage">
+									<figure>
+										<img src="img/menuIcons/home.png" alt="home">
+									</figure> 
+							        <a role="button" class="" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Home
+							        </a>
+							    </h4>
+							</div>
+						</div>
+						  	<div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      	<h4 class="panel-title">
+							      		<figure>
+											<img src="img/menuIcons/depreciation.png" alt="Depreciation">
+										</figure> 
+							        	<a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          		Depreciation
+							        	</a>
+							      	</h4>
+							    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      	<div class="panel-body">
+									<a href="chart_depreciation_model.html" class="chartsMenuActive">- Depreciation by Model</a>
+<div class="empaty-small"></div>
+									<a href="chart_depreciation_variant.html">- Depreciation by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/supply&demandactive.png" alt="supply&demand">
+									</figure> 
+						        	<a class="collapsed chartsMenuActive" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          		Supply & Demand
+						        	</a>
+						      	</h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      	<div class="panel-body">
+									<a href="Dashboard_Supply&Demand.html">- Supply & Demand by Model</a>   
+<div class="empaty-small"></div>
+									<a href="Dashboard_Supply&Demand.html">- Supply & Demand by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title rankinPage">
+						      		<figure>
+										<img src="img\Icons\Dashboard\Menu/ranking1.png" alt="Raking">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Raking
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title geolocationPage">
+						      		<figure>
+										<img src="img/menuIcons/geolocation.png" alt="geolocation">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse"  aria-expanded="false">
+						          		Geolocation
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title marketPricePage">
+						      		<figure>
+										<img src="img/menuIcons/market price.png" alt="market price">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Market Price
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12" >
+					<nav class="navbar" style="margin-bottom: 30px">
+					    <ul class="nav navbar-nav pull-right select-menu">
+					        <li class="makeLi activCarChoose"><a href="#">Make</a></li>
+					        <li class="modelLi disabled"><a href="#">Model</a></li>
+					        <li class="variantLi disabled"><a href="#">Variant</a></li> 
+					        <li class="yearLi disabled"><a href="#">Year</a> </li> 
+					        <li class="territoryLi disabled"><a href="#">Territory</a> </li> 
+<div class="clear"></div>
+					    </ul>
+					</nav>
+					<div class="row makeDiv">
+						<div class="col-lg-12">
+							<div class="make">
+								<input type="text" placeholder="Search make" class="pull-left" id="search-criteria-menu">
+								
+								<div class="clear"></div>
+								<i class="fa fa-search" aria-hidden="true"></i>
+								<ul></ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row selectedItems">
+						<div class="col-lg-12 col-md-12">
+							<div class="applied">
+								<p class="selectApplied">
+									<img src="img\Icons\Dashboard\Filter/selected.png" alt="">Applied:
+								</p>
+								<p class="car">
+									<img src="img\Icons\Dashboard\Filter/car.png" alt="">
+									<span class="spanMake"></span>
+									<span class="spanModel"></span>
+									<span class="spanVariant"></span>
+								</p>
+								<p class="year">
+									<img src="img\Icons\Dashboard\Filter/year.png" alt="">
+									<span></span>
+								</p>
+								<p class="territory">
+									<img src="img\Icons\Dashboard\Filter/territory.png" alt="">
+									<span></span>
+								</p>
+								<button>CHANGE</button>
+<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="audi">
+								
+							</div>
+							<div class="selectOptions">
+								<span class="firstMake">Make:</span>
+								<select name="make" id="makeAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="firstVariant">Variant:</span>
+								<select name="variant" id="variantAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="firstTerritory">Territory:</span>
+								<select name="territory" id="territoryAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="secondModel">Model</span>
+								<select name="model" id="modelAuto" value="select" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+									<span class="secondYear">Year</span>
+								<select name="year" id="yearAuto" class="form-control selectArrow">
+									<option value="select">Select</option>
+								</select>
+								<button class = "btn btn-default">APPLY FILTER</button>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row charts chartsDepreciation supllayDemand">
+						<div class="col-lg-12 col-md-12 co-sm-12 col-xs-12">
+							<div>
+								<div class="chartsPart ">
+										<h5><u>Supply & Demand</u> of Audi A4 <u>2012</u></h5>
+									<div class="rakingMakes ">
+										<button class="fullScreen"><a href="">More Details</a></button>
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+
+									</div>
+
+<div class="clear"></div>
+						<div class="row dealership">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div id="supplay&Demand" style="width:100%;">
+<div class="clear"></div>
+								</div>
+<div class="clear"></div>
+							</div>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div>
+										<table class="table tableLeft">
+											<tbody>
+												<tr>
+													<td>Year <span class="pull-right">2012</span></td>
+													
+<div class="clear"></div>
+												</tr>
+												<tr>
+													<td>Demand Price <span class="pull-right">RM 223,000 </span></td>
+													
+												</tr>
+												<tr>
+													<td>Market Average Price <span class="pull-right">RM 180,000</span></td>
+													
+												</tr>
+<div class="clear"></div>
+											</tbody>
+<div class="clear"></div>
+										</table> 
+<div class="clear"></div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div>
+										<table class="table tableRight">
+										<tbody>
+											<tr>
+												<td>Maximum Price <span class="pull-right">RM 200,000</span></td>
+												
+	<div class="clear"></div>
+											</tr>
+											<tr>
+												<td>Minimum Price  <span class="pull-right">RM 750,000 </span></td>
+												
+											</tr>
+											<tr>
+												<td>Average Demand per Day <span class="pull-right">45</span></td>
+	<div class="clear"></div>
+											</tr>
+	<div class="clear"></div>
+										</tbody>
+	<div class="clear"></div>
+								</table> 			
+									</div>
+<div class="clear"></div>
+								</div>
+<div class="clear"></div>
+<div class="empaty-medium"></div>
+<div class="empaty-small"></div>
+					</div>
+<div class="clear"></div>
+								</div>
+								
+								<div class="row charts">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingByModel">
+										<div>
+											<h4 class="text-center">Supply & Demand of other Audi Models</h4>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart rakingByVariant">
+										<div>
+											<h4 class="text-center">Supply & Demand of Audi A4 Variants</h4>
+										</div>
+									</div>
+<div class="clear"></div>	
+								</div>
+<div class="clear"></div>
+							</div>
+<div class="clear"></div>
+						</div>
+<div class="clear"></div>
+					</div>
+					<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<p><u>Supply & Demand</u> of Audi A4 2012</p>
+							<div id="supplay&Demand1">
+
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6  chartsPart">
+							<p><u>Supply & Demand</u> of Audi A6 2012</p>
+							<div id="supplay&Demand2">
+
+							</div>
+						</div>
+<div class="clear"></div>
+					</div>
+<div class="empaty-large"></div>
+					<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<p><u>Supply & Demand</u> of Audi A5 2012</p>
+							<div id="supplay&Demand3">
+
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<p><u>Supply & Demand</u> of Audi A8 2012</p>
+							<div id="supplay&Demand4">
+							</div>
+						</div>
+<div class="clear"></div>
+					</div>
+<div class="empaty-large"></div>
+					<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<p><u>Supply & Demand</u> of Audi R8 2012</p>
+							<div id="supplay&Demand5">
+
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<p><u>Supply & Demand</u> of Audi RS 2012</p>
+							<div id="supplay&Demand6">
+							</div>
+						</div>
+<div class="clear"></div>
+					</div>
+<div class="empaty-large"></div>
+
+
+					<div class="row charts variantDiv compairSupplyDemand">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart">
+							<div class="pull-left  detailsCompair">
+								<p class="text-center"><u>Supply & Demand</u> Comparison <u>Over Time</u></p>
+								<div class="selectedVariant noneEdit">
+									<span class="modelCh">Choose Make:</span>
+									<select class="selectArrow" name="model" id="chooseModel">
+										
+										<option value="Make 1">Make 1</option>
+										<option value="Make 2">Make 2</option>
+										<option value="Make 3">Make 3</option>
+									</select>
+
+									<span class="variantCh">Choose Model:</span>
+									<select class="selectArrow" name="variant" id="chooseVariant">
+										
+										<option value="Model 1">Model 1</option>
+										<option value="Model 2">Model 2</option>
+										<option value="Model 3">Model 3</option>
+									</select>
+
+									<span class="yearCh">Choose Year:</span>
+									<select class="selectArrow" name="year" id="chooseYear">
+										
+										<option value="Year 1">Year 1</option>
+										<option value="Year 2">Year 2</option>
+										<option value="Year 3">Year 3</option>
+									</select>
+
+									<button>COMPARE THIS CAR</button>
+								</div>
+								<p class="text-left secondP">Supply & Demand of <u>Audi A4</u></p>
+								<table class="table">
+									<tr>
+										<th>Year
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Demand Price
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+
+										<th>Depreciation Rate
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+									</tr>
+									<tr>
+											<td>2014</td>
+											<td>RM 223,000</td>
+											<td>76,300 - 11% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2013</td>
+											<td>RM 180,000</td>
+											<td>67,210 - 12%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 200,000</td>
+											<td>34,310 - 65% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2017</td>
+											<td>RM 750,000</td>
+											<td>10,840 - 11%
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 550,000</td>
+											<td>23,420 - 33%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+								</table>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 chartsPart addCar">
+							<h5>Add Car to Compare</h5>
+								<div class="pull-right detailsCompair">
+									<img src="img\Icons\Dashboard/add.png" alt="" class="compareImg">
+									<img src="img\Icons\Dashboard/question.png" alt="">
+									<img src="img\Icons\Dashboard/export.png" alt="">
+								</div>
+
+
+								<div class="selectedVariant ">
+									<span class="modelCh">Choose Make:</span>
+									<select class="selectArrow" name="model" id="chooseModel">
+										
+										<option value="Make 1">Make 1</option>
+										<option value="Make 2">Make 2</option>
+										<option value="Make 3">Make 3</option>
+									</select>
+
+									<span class="variantCh">Choose Model:</span>
+									<select class="selectArrow" name="variant" id="chooseVariant">
+										
+										<option value="Model 1">Model 1</option>
+										<option value="Model 2">Model 2</option>
+										<option value="Model 3">Model 3</option>
+									</select>
+
+									<span class="yearCh">Choose Year:</span>
+									<select class="selectArrow" name="year" id="chooseYear">
+									
+										<option value="Year 1">Year 1</option>
+										<option value="Year 2">Year 2</option>
+										<option value="Year 3">Year 3</option>
+									</select>
+
+									<button>COMPARE THIS CAR</button>
+								</div>
+							<p class="text-left secondP hiddenP">Supply & Demand of<u> Audi A6</u></p>
+								<table class="table compareHideTable">
+									<tr>
+										<th>Year
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Demand Price
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+										<th>Depreciation Rate
+											
+											<img src="img\Functional/sort.png" alt="">
+										</th>
+									</tr>
+									<tr>
+											<td>2014</td>
+											<td>RM 223,000</td>
+											<td>76,300 - 11% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2013</td>
+											<td>RM 180,000</td>
+											<td>67,210 - 12%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 200,000</td>
+											<td>34,310 - 65% 
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2017</td>
+											<td>RM 750,000</td>
+											<td>10,840 - 11%
+												<i class="fa fa-caret-up" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2016</td>
+											<td>RM 550,000</td>
+											<td>23,420 - 33%
+												<i class="fa fa-caret-down" aria-hidden="true"></i>
+											</td>
+										</tr>
+								</table>
+							</div>
+						<div class="clear"></div>
+					</div>
+
+
+
+
+
+
+
+
+
+				</div>	
+<div class="clear"></div>		
+			</div>
+<div class="clear"></div>
+		</div>
+<div class="clear"></div>
+	</div>
+
+
+	<div class="container-fluid makeDecisions">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-offset-xs-2">
+						<h2>Make smarter decisions today.</h2>
+					</div>
+				</div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  message">
+									<input type="name" class="form-control pull-left" id="exampleInputEmail3" placeholder="Name">
+									<input type="company" class="form-control pull-left" id="exampleInputEmail3" placeholder="Company">
+									<input type="email" class="form-control pull-left" id="exampleInputEmail3" placeholder="Email">
+									<textarea class="form-control" rows="5" placeholder="New Message"></textarea>
+									<div>
+										<img src="img/Functional/SendEmail.png" alt="sent message">
+									</div>
+								</div>
+							</div>
+<div class="clear"></div>
+						</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 lightLogo">
+								<a class="navbar-brand" href="#"><img src="img/iCarDataLight.png" alt="Logo Light" ></a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>FEATURES</p>
+								<ul>
+									<li><a href="#">Depreciation</a></li>
+									<li><a href="#">Supply &Demand
+									</a></li>
+									<li><a href="#">Ranking
+									</a></li>
+									<li><a href="#">Geolocation</a></li>
+									<li><a href="#">Market Price</a> </li>
+								</ul>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>COMPANY</p>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Press Room</a></li>
+									<li><a href="#">Investor Relations</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>RESOURCES</p>
+								<ul>
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Personal Data Protection</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+<div class="clear"></div>				
+				</div>
+ <div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 copy-right">
+					</div>
+					<div class="col-lg-4 col-lg-offset-4 col-md-6  col-sm-6  col-xs-4 col-xs-offset-4  conditions">
+						<p ><a href="">Terms & Conditions·  Privacy Policy</a></p>
+					</div>
+				</div>
+<div class="empaty-large"></div>
+			</div>
+		</div>
+		
+
+	
+  <script src="js/script_search.js"></script> 
+ <script>
+    $(document).ready(function(){
+        /*date and copy right*/
+  		var date=new Date(),
+        year = date.getFullYear(),
+       	text = "Copyright " + year + " iCarData.com. All rights reserved.";
+	        
+        $('.copy-right').html('<p class="text-align-left">' + text + '</p>');
+        /*choose subscribe method*/
+
+		$('.payPer').on('click', function(){
+		    $('.annualSubscribe.activePayAnnual').removeClass('activePayAnnual');
+		    $(this).addClass('activePayAnnual');
+		});
+
+	    $('.annualSubscribe').on('click', function(){
+			$('.payPer.activePayAnnual').removeClass('activePayAnnual');
+			$(this).addClass('activePayAnnual');
+		});
+
+        /*select model*/
+		$('.selectModel').on('click', function(){
+			$('.selectvar.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+	    $('.selectVariant').on('click', function(){
+			$('.selectModel.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+(function (H) {
+    H.wrap(H.seriesTypes.column.prototype, 'translate', function (proceed) {
+        var options = this.options,
+            rTopLeft = options.borderRadiusTopLeft || 0,
+            rTopRight = options.borderRadiusTopRight || 0,
+            rBottomRight = options.borderRadiusBottomRight || 0,
+            rBottomLeft = options.borderRadiusBottomLeft || 0;
+
+        proceed.call(this);
+
+        if (rTopLeft || rTopRight || rBottomRight || rBottomLeft) {
+            H.each(this.points, function (point) {
+                var shapeArgs = point.shapeArgs,
+                    w = shapeArgs.width,
+                    h = shapeArgs.height,
+                    x = shapeArgs.x,
+                    y = shapeArgs.y;
+                point.shapeType = 'path';
+                point.shapeArgs = [
+                    'M', x + rTopLeft, y,
+                    // top side
+                    'L', x + w - rTopRight, y,
+                    // top right corner
+                    'C', x + w - rTopRight / 2, y, x + w, y + rTopRight / 2, x + w, y + rTopRight,
+                    // right side
+                    'L', x + w, y + h - rBottomRight,
+                    // bottom right corner
+                    'C', x + w, y + h - rBottomRight / 2, x + w - rBottomRight / 2, y + h, x + w - rBottomRight, y + h,
+                    // bottom side
+                    'L', x + rBottomLeft, y + h,
+                    // bottom left corner
+                    'C', x + rBottomLeft / 2, y + h, x, y + h - rBottomLeft / 2, x, y + h - rBottomLeft,
+                    // left side
+                    'L', x, y + rTopLeft,
+                    // top left corner
+                    'C', x, y + rTopLeft / 2, x + rTopLeft / 2, y, x + rTopLeft, y,
+                    'Z'
+                ];
+                    
+            });
+        }
+    });
+}(Highcharts));
+
+
+Highcharts.chart('supplay&Demand', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','35k', '55k', '75k', '<p style="color:#009c63;font-weight:600">'+'95k'+'</p>', '115k'],
+        title: {
+        	enabled: true,
+        	text: 'Price in RM',
+        	x:-280,
+        	y:0
+      },
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        y: 50,
+        x:-30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<p style="color:#009c63; font-size:15px; font-family:AvenirNextLTProRegular">Average Market Price</p><br>',
+        pointFormat: '<span style="visibility: hidden;">&nbsp</span> <p style="color:#009c63; font-size:14px; font-family:AvenirNextLTProRegular"> RM {point.y}k</p>'
+    },
+     credits: {
+        enabled: false
+    },
+   
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px; opacity:0.7">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,  15, 22, 29.5, 34,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px; opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,  0, 0, 0, {y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px; opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,12,25,32,29,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; font-size:13px; opacity:0.7">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,35,2,20,40,8],
+    }],
+    function(chart) {
+        var series = chart.series;
+        $.each(series, function(i,ser) {
+          $(ser.legendSymbol.element).attr('stroke-width','1');
+          $(ser.legendSymbol.element).attr('stroke','black');
+         });
+    }
+       
+});
+
+
+
+Highcharts.chart('supplay&Demand1', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+         title: {
+        	enabled: true,
+        	text: 'Price',
+        	x:-110,
+        	y: 10
+      },
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -30,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+     tooltip: {
+        headerFormat: '<p style="color:#009c63; font-size:15px; font-family:AvenirNextLTProRegular">Average Market Price</p><br>',
+        pointFormat: '<span style="visibility: hidden;">&nbsp</span> <p style="color:#009c63; font-size:14px; font-family:AvenirNextLTProRegular"> RM {point.y}k</p>'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,0,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,0,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+
+Highcharts.chart('supplay&Demand2', {
+     chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+         title: {
+        	enabled: true,
+        	text: 'Price',
+        	x:-110,
+        	y:10
+      },
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -30,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<p style="color:#009c63; font-size:15px; font-family:AvenirNextLTProRegular">Average Market Price</p><br>',
+        pointFormat: '<span style="visibility: hidden;">&nbsp</span> <p style="color:#009c63; font-size:14px; font-family:AvenirNextLTProRegular"> RM {point.y}k</p>'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,0,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,0,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+
+Highcharts.chart('supplay&Demand3', {
+     chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+         title: {
+        	enabled: true,
+        	text: 'Price',
+        	x:-110,
+        	y:10
+      },
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -30,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<p style="color:#009c63; font-size:15px; font-family:AvenirNextLTProRegular">Average Market Price</p><br>',
+        pointFormat: '<span style="visibility: hidden;">&nbsp</span> <p style="color:#009c63; font-size:14px; font-family:AvenirNextLTProRegular"> RM {point.y}k</p>'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,0,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,0,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+Highcharts.chart('supplay&Demand4', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+         title: {
+        	enabled: true,
+        	text: 'Price',
+        	x:-110,
+        	y:10
+      },
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -30,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<p style="color:#009c63; font-size:15px; font-family:AvenirNextLTProRegular">Average Market Price</p><br>',
+        pointFormat: '<span style="visibility: hidden;">&nbsp</span> <p style="color:#009c63; font-size:14px; font-family:AvenirNextLTProRegular"> RM {point.y}k</p>'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,0,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,0,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+Highcharts.chart('supplay&Demand5', {
+     chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+         title: {
+        	enabled: true,
+        	text: 'Price',
+        	x:-110,
+        	y:10
+      },
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -30,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+     tooltip: {
+        headerFormat: '<p style="color:#009c63; font-size:15px; font-family:AvenirNextLTProRegular">Average Market Price</p><br>',
+        pointFormat: '<span style="visibility: hidden;">&nbsp</span> <p style="color:#009c63; font-size:14px; font-family:AvenirNextLTProRegular"> RM {point.y}k</p>'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,0,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,0,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity:0.7">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+Highcharts.chart('supplay&Demand6', {
+     chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+         title: {
+        	enabled: true,
+        	text: 'Price',
+        	x:-110,
+        	y:10
+      },
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -30,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<p style="color:#009c63; font-size:15px; font-family:AvenirNextLTProRegular">Average Market Price</p><br>',
+        pointFormat: '<span style="visibility: hidden;">&nbsp</span> <p style="color:#009c63; font-size:14px; font-family:AvenirNextLTProRegular"> RM {point.y}k</p>'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular; opacity = 0.7">No of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,0,40],
+        
+    },  
+   {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity = 0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity = 0.7">No. of CTR</p>',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,0,11],
+
+    },
+
+
+    {
+        name: '<p style="font-family: AvenirNextLTProRegular;opacity = 0.7">No. of Listings</p>',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+})
+
+
+
+ </script>
+</body>
+</html>

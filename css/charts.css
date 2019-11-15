@@ -1,0 +1,783 @@
+body h4{
+	font-size: 20px;
+}
+.clear{
+	clear: both;
+}
+
+
+#myNavbar ul li>a, .navBarCharts ul button{
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+	font-size: 17px;
+}
+.profileInfo li{
+	margin-right: 0!important;
+}
+.dashboard h3{
+	font-size: 26px;
+  	font-weight: 600;
+  	text-align: left;
+  	color: #ffffff;
+}
+
+.navBarCharts ul button{
+	border: none;
+	outline: none;
+	background: inherit;
+	box-shadow: none;
+}
+
+.navBarCharts ul button:hover, .navBarCharts ul button:active, .navBarCharts ul button:focus,.navBarCharts ul button:visited{
+	background: white!important;
+	color: #403e5b!important;
+	opacity: 0.5;
+	outline:none!important;
+	box-shadow: none!important;
+}
+.profileInfo{
+	padding: 0;
+	top: 134%;
+    left: -29%;
+	width: 173px;
+}
+.arrow{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	transform: rotate(-46deg);
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	background-color: white;
+    top: -6%;
+    left: 10%;
+    z-index: -9999;
+}
+.profileInfo li a{
+	padding: 7px 23px!important;
+}
+
+.btn-group.open .dropdown-toggle{
+ -webkit-box-shadow: none!important; 
+    box-shadow: none!important; 
+}
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default{
+	background:inherit!important;
+}
+.btn-group-lg>.btn, .btn-lg{
+	padding: 8px 12px!important;
+}
+.ourPlans h1{
+	font-family: 'AvenirNextLTProMedium'; 
+}
+.modal-header{
+	border:none!important;
+}
+.modal-body{
+	border-bottom: 2px solid #e5e5e5!important;
+}
+.payPer button, .annualSubscribe button{
+	border: 1px solid #009c63!important;
+	color:#009c63!important;
+	font-weight: normal;
+	font-size: 14px!important;
+}
+.payPer:hover button,.annualSubscribe:hover button{
+	background-color: #119a4f!important	;
+	color: white!important;
+ 	border: solid 1px white!important;
+ }
+.activePayAnnual{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+	background-color: #119a4f;
+	border-radius: 4px;
+	padding: 0;	
+	cursor: pointer;
+}
+.mainButton{
+	border: 1px solid!important;
+	margin-bottom: 6%!important;
+	background-color: #009c63!important;
+	color: #ffffff!important;
+	font-size: 14px!important;
+	letter-spacing: 1px;
+	width: 34.1%!important;
+}
+#popUpButton:hover{
+	border: 1px solid #119a4f!important;
+	color: #119a4f!important;
+}
+.disabled{
+    pointer-events:none;
+    opacity:0.4;
+}
+/* .audi{
+	background-image: url(../img/Backgrounds/audi.png);
+	background-repeat: no-repeat;
+	height: 199px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} */
+
+.selectOptions select{
+	width: 31.5%;	
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 2%;
+	height: 40px;
+	border-radius: 2px;
+	font-size: 15px;
+	padding-left: 18%;
+	font-family: 'AvenirNextLTProRegular';
+}
+/* #makeAuto{
+	padding-left: 17%;
+} */
+#territoryAuto{
+	margin-right: 0!important;
+}
+.selectOptions button{
+	width: 31.5%;
+	background: #009c63;
+	color: #ffffff;
+	letter-spacing: 1px;
+	font-size: 14px;
+	border:none;
+	outline: none;
+	padding: 1.3%;
+	border-radius: 2px;
+	font-family: 'AvenirNextLTProRegular';
+}
+.selectOptions{
+	display: none;
+	position: relative;
+}
+#makeAuto{
+	margin-left: 
+}
+.selectOptions span{
+	position: absolute;
+	font-size: 15px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+.firstMake, .firstVariant, .firstTerritory{
+	top: 10%;
+}
+.secondModel, .secondYear{
+	top: 69%;
+}
+.firstMake, .secondModel{
+	left: 3%;
+}
+.firstVariant, .secondYear{
+	left: 37%;
+}
+.firstTerritory{
+	left: 71%;
+}
+.makeDiv{
+	display: none;
+}
+.selectedItems p:first-child{
+	width: 16%;
+}
+.car{
+	width: 31%;
+}
+.selectedItems p, .selectedItems button{
+	visibility:hidden;
+}
+.year, .territory{
+	width: 16%;
+}
+.selectedItems p{
+	float: left;
+	font-size: 17px;
+	text-align: left;
+	color: #009c63;
+	font-family: "AvenirNextLTProMedium";
+}
+.selectedItems p img{
+	margin-right: 2%;
+}
+.selectedItems button{
+	float: left;
+	width: 20%;
+    padding: 1.3% 0;
+    border-radius: 2px;
+	background-color: #009c63; 
+	color: white;
+	border:none;
+	outline: none;
+}
+.applied{
+	margin-bottom: 5.3%;
+	margin-top: 2%;
+}
+.spanMake, .spanModel{
+	margin-right: 3%;
+}
+.make{
+	position: relative;
+    background-color: #ffffff;
+  	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+}
+
+.make ul li{
+	float: left;
+    margin-right: 12%;
+    margin-bottom: 2%;
+}
+.make ul{
+	margin-left: 3%;
+}
+.make span{
+    margin-top: 4%;
+    margin-right: 6%;
+    opacity: 0.5;
+  	font-size: 16px;
+  	font-weight: 500;
+  	color: #32343d!important;
+}
+.make input{
+    border: none;
+    border-bottom: 1px solid #A0A1A5;
+    width: 22%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+    outline: none;
+    padding-left: 2%;
+    margin-left: 3%;
+}
+.clear{
+	clear: both;
+}
+.make ::-webkit-input-placeholder{
+	opacity: 0.5;
+  	font-size: 16px;
+  	font-weight: 500;
+  	color: #32343d!important;
+}
+.make i{
+	position: absolute;
+    left: 21%;
+    top: 22%;
+    opacity: 0.5;
+}
+.makeModel h4{
+	font-weight: 500;
+  	color: #32343d;
+}	
+.makeModel .panel-heading{
+	padding-bottom: 15px;
+}
+.makeModel h4 a{
+	vertical-align: bottom;
+}
+.searchModel{
+	position: relative;
+}
+.searchModel i{
+	position: absolute;
+    top: 17%;
+    left: 83%;
+    font-size: 19px;
+    color: #A0A1A5!important;
+}
+.searchModel ::-webkit-input-placeholder{
+	opacity: 0.5;
+  	font-size: 17px;
+  	font-weight: 500;
+  	color: #32343d!important;
+  	font-family: 'AvenirNextLTProMedium'!important;
+}
+.searchModel input{
+	padding: 12px 10px 12px 20px;
+	border: none;
+	border-bottom: 1px solid #A0A1A5;
+	width: 100%;
+	outline: none;
+}
+
+.makeModel ul li{
+	list-style-type: none;
+	font-size: 17px;
+  	font-family: 'AvenirNextLTProRegular';
+  	color: #403e5b;
+  	cursor: pointer;
+  	line-height: 1.18;
+}
+.makeModel ul li span{
+	color: #119a4f;
+	display: none;
+}
+.makeModel ul li:hover span{
+	display: block;
+	color: #119a4f;
+}
+.makeModel ul li:hover {
+	color: #119a4f;
+}
+.makeModel ul{
+	padding-left: 5px;
+}
+.menu figure{
+	display: inline;
+}
+.menu p{
+	display: inline;
+	font-size: 17px;
+	color: #403e5b;
+	line-height: 1.18;
+	margin: 
+}
+
+.subMenu{
+    margin-top: 5%;
+    display: none;
+}
+.subMenu1{
+	margin-top: 5%;
+    display: none;
+}
+.menu li:hover p,  .menu li:active p, .menu li:focus p{
+	color: #009c63!important;
+	border-radius: 4px;
+	opacity: 1;
+}
+.charts{
+	display: none;
+}
+.chartsPart{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	position: relative;
+    padding: 3%;
+    margin-bottom: 4.7%;
+}
+.detailsdiv{
+	position: absolute;
+	z-index: 999;
+    left: 69%;
+}
+.detailsdiv img{
+	vertical-align: middle;
+}
+.detailsdiv button{
+    z-index: 999;
+  	border: solid 1px #403e5b;
+  	font-size: 15px;
+ 	background: inherit;
+ 	font-family: 'AvenirNextLTProRegular';
+ 	padding: 5px 20px;
+ 	border-radius: 2px;
+}
+.detailsdiv button a{
+ 	color: #403e5b;
+ 	text-decoration: none;
+
+}
+
+.detailsdiv img:nth-child(2), .detailsdivMake img:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+	vertical-align: middle;
+}
+.activePayAnnual button{
+	border: solid 1px #ffffff!important;
+	background: #119a4f;
+	font-size: 14px;
+	font-weight: 500;
+	color: #ffffff;
+}
+.chartsDashboard .detailsdiv{
+	width: 100%;
+	left: 7%;
+}
+.chartsDashboard .detailsdiv p{
+	display: inline;
+    padding-right: 24%;
+}
+.chartsDashboard .detailsdiv img:nth-child(3){
+	padding: 0 10px;
+}
+.charts{
+	margin-top: 20px;
+}
+.detailsdiv p{
+	margin-top: 4%;
+	font-family: 'AvenirNextLTProRegular';
+
+}
+.geocharts h6{
+	font-size: 13px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+	margin-top: 17%;
+}
+.makeRanking, .modelRanking, .variantRanking{
+	margin: 10% auto;
+}
+.makeRanking button, .modelRanking button, .variantRanking button{
+  	border: solid 1px rgba(64, 62, 91, 0.5);
+  	background: inherit;
+  	outline: none;
+  	font-family: "AvenirNextLTProMedium";
+  	width: 89%;
+  	margin: 0 auto 10px auto;
+  	display: block;
+  	height: 40px;
+  	border-radius: 2px;
+}
+.variantRanking>p,.makeRanking>p, .modelRanking>p{
+	display: inline;
+	font-size: 17px;
+	color: #403e5b;
+	float: left;
+	font-family: 'AvenirNextLTProMedium';
+	margin-bottom: 40px;
+	margin-left: 5%;
+}
+.makeRanking>p>span, .modelRanking>p>span, .variantRanking>p>span{
+	text-decoration: underline;
+
+}
+.variantRanking>img,.makeRanking>img, .modelRanking>img{
+	margin-left: 11%;
+}
+.makeRanking button p, .modelRanking button p, .variantRanking button p{
+	font-family: 'AvenirNextLTProRegular';
+	font-size: 15px;
+	color: #403e5b;	
+	border-radius: 2px;	
+	margin-bottom: 0;
+	margin: 4px auto;
+}
+.makeRanking button span, .modelRanking button span, .variantRanking button span{
+	font-family: 'AvenirNextLTProRegular';
+	font-size: 15px;
+	color: #403e5b;	
+	margin-bottom: 0;
+	margin: 4px auto;
+}
+.makeRanking button:nth-child(1), .modelRanking button:nth-child(1), .variantRanking button:nth-child(1){
+	border:solid 1.5px #009c63;
+}
+
+
+.showButton{
+	margin: 0 auto;
+	display: block;
+	border-radius: 4px!important;
+	width: 50.5%!important;
+	margin-top: 25px!important;
+	height: 34px!important;
+}
+.raking{
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+.filters ul li{
+	list-style-type: none;
+	font-size: 16px;
+  	font-weight: 500;
+  	color: #119a4f;
+  	cursor: pointer;
+  	padding: 4px 21px;
+  	border-radius: 100px ;
+  	border: 1px solid #119a4f;
+  	width: 20%;
+}
+#chart_div{
+	margin-top: 5%;
+	margin-bottom: 10%;	
+}
+#marketPrice{
+	margin-top: 9%;
+}
+.detailsdivGeo p{
+	display: inline;
+	font-family: 'AvenirNextLTProMedium';
+	font-size: 17px;
+    margin-right: 38%;
+    vertical-align: middle;
+}
+.detailsdivGeo button{
+    z-index: 999;
+  	border: solid 1px rgba(64, 62, 91, 0.5);
+  	font-size: 15px;
+ 	color: #403e5b;
+ 	background: inherit;
+ 	font-family: 'AvenirNextLTProRegular';
+ 	padding: 5px 18px;
+}
+.detailsdivGeo img{
+	vertical-align: middle;
+}
+.detailsdivGeo img:nth-child(3){
+    margin-left: 10px;
+    margin-right: 10px;
+	vertical-align: middle;
+
+}
+.makeModel nav ul{
+	width: 100%;
+	background-color:#403E5B;
+	border-radius: 4px; 
+	padding-left: 0;
+}
+.makeModel nav ul li{
+	width: 20%;
+	text-align: center;
+	border-right: 1px solid black;
+}
+.makeModel nav ul li:last-child{
+	border-right: none;
+}
+.makeModel nav ul li a{
+	color: white;
+}
+.makeModel nav ul li a:hover, .makeModel nav ul li a:active, .makeModel nav ul li a:visited, .makeModel nav ul li a:focus{
+	background-color: #119a4f;
+	border-radius: 4px;
+	opacity: 1;
+}
+.activCarChoose{
+	background-color: #119a4f;
+	border-radius: 4px;
+}
+/* side bar */
+.chartsMenuActive {
+	color:#009c63 !important;
+	text-decoration: none!important;
+}
+.makeModel .nav>li.disabled>a{
+	color: white!important;
+}
+.sideBar a{
+	font-size: 17px;
+	line-height: 1.18;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+}
+
+.panel-default>.panel-heading{
+	background: white!important;
+}
+.panel{
+	-webkit-box-shadow:none!important;
+	 box-shadow:none!important;
+}
+.panel-default{
+	border:none!important;
+}
+.sideBar h4 figure{
+	display: inline;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.panel-body{
+	border-top-color: white!important;
+}
+.panel-body{
+	margin-left: 15%;
+}
+.activeChangeButton{
+	background:white!important;
+    color: #119a4f!important;
+    border: 1px solid #119a4f!important;
+}
+.chartsPart table .fa-caret-up{
+	color:  #009c63!important;
+	cursor: pointer;
+}
+.chartsPart table .fa-caret-down{
+	-webkit-column-rule: #ec6d5c;
+	-moz-column-rule: #ec6d5c;
+	-o-column-rule: #ec6d5c;
+	column-rule: #ec6d5c!important;
+	cursor: pointer;
+	color:#ec6d5c!important;
+}
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1900px){
+	.container-fluid{
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.detailsdiv{
+		left: 61%;
+	}
+	.detailsdivGeo p{
+		margin-right: 23%;
+	}
+	#marketPrice{
+		margin-top: -1%;
+	}
+	.makeRanking, .modelRanking, .variantRanking{
+		margin: 0 auto;
+	}
+	.variantRanking>p, .makeRanking>p, .modelRanking>p{
+		margin-left: -3%;
+	}
+	.showButton{
+		width: 60.5%!important;
+	}
+	#headingThree{
+	    padding: 10px 13px;
+	}
+	.chartsDashboard .detailsdiv p{
+		padding-right: 10%;
+	}
+	.legend-area{
+		left: 44%!important;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+	/* #myNavbar ul li {
+	    	margin-right: -34px;
+	} */
+	.userImage{
+		padding-right: 25px!important;
+	}
+	/* #myNavbar ul li:hover a, #myNavbar ul li:active a, #myNavbar ul li:focus a, #myNavbar ul li:visited a{
+		width: 83%;
+	} */
+	.navBarCharts .nav .navbar-nav{
+	    margin-top: 1%!important;
+	}
+	.searchModel input{
+		width: 40%;
+	}
+	#myNavbar ul li a{
+		padding: 8px 15px!important;
+	}
+	.searchModel i{
+		left: 36%;
+	}
+	.detailsdivGeo p{
+		margin-right: 33%;
+	}
+	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+		margin-left:-15px!important;
+		margin-right: -15px!important;
+	}
+		.chartsDashboard .detailsdiv p{
+		padding-right: 19%;
+	}
+	.chartsDashboard .detailsdiv{
+		width: 95%;
+	}
+	.headLogo{
+		margin-left: 2%!important;
+	}
+}
+
+@media (min-width: 375px) and (max-width: 767px){
+	.container-fluid{
+		width: 1440px;
+	}
+	#myNavbar ul li{
+		float: left!important;
+	}
+	#myNavbar{
+		position: relative!important;
+	}
+	.navbar-header{
+		float: left!important;
+		width: 10%!important;
+	}
+	.navbar-nav{
+		width: 100%;
+		float: right!important;
+	}
+	.navbar-collapse{
+		width: 60%!important;
+		float: right!important;
+	}
+	.searchModel input{
+		width: 300px;
+	}
+	.searchModel i{
+		left: 250px;
+	}
+	.makeModel nav ul li{
+		display: inline;
+		float: left;
+	}
+	.makeModel .col-lg-3{
+		width: 300px;
+		float: left;
+	}
+	.makeModel .col-lg-8{
+		width: 1100px;
+		float: right;
+		margin-top: 12px;
+	}
+	.selectedItems button{
+		padding:0.7% 0;
+	}
+	.selectOptions button{
+		padding: 0.65%;
+	}
+	.detailsdiv{
+		left: 76%;
+	}
+	.makeRanking, .modelRanking, .variantRanking{
+		width: 320px;
+		float: left;
+	} 
+	.detailsdivGeo p{
+		margin-right: 55%;
+	}
+	#myNavbar ul li{
+		margin-bottom: 0;
+	}
+	.open{
+	  		display: block;
+	  	} 
+	.btn-group-vertical>.btn, .btn-group>.btn{
+		float: none;
+	}
+	.profileInfo{
+		float: left!important;
+		width: 173px!important;
+		border: 1px solid #ccc!important;
+		margin-left: -5%;
+    	margin-top: 2%!important;
+    	position: absolute!important;
+    	left: 607px;
+    	top: 38px;
+    	background: white!important;
+	}
+	.profileInfo li a:hover{
+		width: 173px!important;
+		text-align: left;
+	}
+	#myNavbar ul li a:hover{
+		color: #403e5b!important;
+    	opacity: 0.5;
+    	font-size: 17px;
+	}
+	.arrow{
+		top: -8px;
+    	z-index: 1;
+	}
+	.conditions{
+		float: right;
+	}
+	.backDashboard p{
+	    padding-right: 39%!important;
+	}
+}

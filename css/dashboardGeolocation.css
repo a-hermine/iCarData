@@ -1,0 +1,166 @@
+.clear{
+	clear: both;
+}
+.chartsDepreciation, .variantDiv{
+	margin-top: 0;
+}
+.variantDiv{
+	margin: 30px 0;
+}
+.chartsPart{
+	margin-bottom: 0;
+}
+.rakingByVariant, .rakingByModel{
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+.tableLeft{
+	margin-left: 6%;
+}
+.tableRight{
+	margin-left: 40%;
+}
+.activeGeolocationRow td{
+	color:  #009c63!important;
+}
+.dealership .tableLeft tr td, .dealership .tableRight tr td{
+	padding: 5.4% 0;
+	margin-left: 20px;
+	
+}
+.dealership table tr td:nth-child(1){
+	padding-left: 0;
+}
+.dealership .tableLeft tr td:nth-child(2), .dealership .tableRight tr td:nth-child(2){
+	padding-right: 0;
+	text-align: right;
+}
+.dealership .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	border-top: none!important;
+	border-bottom: 1px solid #ddd!important;
+}
+.dealership thead tr th{
+	border-bottom: none!important;
+}
+.dealership table{
+	margin-bottom: 40px;
+}
+.sortTable{
+	width: 96%;
+	margin: 0 auto;
+	margin-top: 10.2%;
+}
+.sortTable tbody tr td, .informationTable tbody tr td{
+	padding: 2.2% 0;
+}
+.sortTable tbody tr th{
+	width: 20%;
+}
+.sortTable tr th:nth-child(1){
+	padding-left: 0!important;
+}
+.sortTable tr th:nth-child(2){
+	padding-right: 0!important;
+}
+.informationTable{
+	width: 94%;
+	margin: 0 auto;
+	margin-top: 8.8%;
+}
+.informationTable thead tr th{
+	padding-left: 0!important;
+}
+.chartsPart:nth-child(1) .rakingMakes{
+	margin-top: -1%;
+}
+* {
+    box-sizing: border-box;
+}
+.map-area {
+    width: 87%;
+    height: 300px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 2%;
+    margin-top: 10.2%;
+}
+
+.legend-area {
+    position: relative;
+    width:300px;
+    height: 30px;
+    margin-top: 0px;
+    transform: rotate(90deg);
+    left: 13%;
+    top: -165px;
+    float: right;
+}
+
+.legendGradient-area {
+    width: 100%;
+    height: 15px;
+    border: 1px solid black;
+}
+#map, #map1{
+	margin-top: 0.2%;
+}
+#map2, #map3, #map4, #map5{
+	margin-top: 0;
+	height: 190px;
+	width: 100%;
+}
+.makeRanking button:nth-child(1), .modelRanking button:nth-child(1), .variantRanking button:nth-child(1){
+    border: solid 1px #403e5b;
+}
+.dealership h6{
+	font-size: 13px;
+	color: #403e5b;
+	font-family: 'AvenirNextLTProRegular';
+    margin-left: 2%;
+}
+
+
+/* dashboard market price */
+.chartMarketPrice .chartsPart .detailsdiv{
+	width: 100%;
+	left: 5%;
+}
+.chartMarketPrice .chartsPart .detailsdiv img:nth-child(3), .chartMarketPrice .variantDiv .detailsV img:nth-child(2){
+	padding: 0 10px;
+}
+.chartMarketPrice .chartsPart .detailsdiv p{
+	display: inline;
+    padding-right: 27%;
+}
+.chartMarketPrice  .detailsV{
+	width: 100%;
+	left: 10%;
+}
+.chartMarketPrice  .detailsV p{
+	display: inline;
+    padding-right: 11%;
+}
+.chartMarketPrice  .selectVariant h4, .selectModel h4{
+	padding: 0.7%;
+
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.chartMarketPrice .chartsPart .detailsdiv p{
+	    padding-right: 14%;
+	}
+	.chartMarketPrice .detailsV p{
+		padding-right: 0;
+	}
+	.legend-area{
+		left: 21%!important;
+	}
+	.informationTable tr td{
+	 	text-align: center;
+	 	padding: 0 6px!important;
+	 } 
+	.informationTable tr th{
+		text-align: center;
+	} 
+
+}
+

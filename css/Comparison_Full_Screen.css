@@ -1,0 +1,151 @@
+.addCar .selectedVariant {
+    opacity: 1;
+    margin-top: 16.5%!important;
+}
+.comparison .selectedVariant{
+	opacity: 1;
+}
+.backDashboard{
+	cursor: pointer;
+}
+.detailsCompair .selectedVariant{
+	margin-top: 15.7%;
+}
+.addCar .detailsCompair img {
+    margin-left: 10px!important;
+}
+.detailsCompair:nth-child(2){
+	width: 35%!important;
+}
+.variantDiv h5{
+	margin-left: 15%!important;
+	vertical-align: middle;
+}
+.detailsCompair:nth-child(2) img:nth-child(1){
+	margin-left: 0!important;
+}
+.chartsPart>.detailsCompair .backDashboard p{
+	display: inline;
+	margin-left: 4%;
+}
+.chartsPart>.detailsCompair .backDashboard p a, .chartsPart>.detailsCompair .backDashboard i{
+	color: #403e5b!important;
+	opacity: 0.5;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	padding: 14px 6px;
+}
+.table>tbody>tr>th{
+	border-top:none;
+}
+.chartsPart table tr th{
+	opacity: 0.8;
+}
+.chartsPart table tr th:nth-child(1){
+	width: 17%;
+}
+.chartsPart table tr th:nth-child(2){
+	width: 35%;
+}
+.chartsPart table tr th:nth-child(3){
+	width: 41%;
+}
+.secondP{
+	margin-left: 0!important;
+}
+.chartsPart table .fa-caret-up{
+	color: #ec6d5c!important;
+}
+.chartsPart table .fa-caret-down{
+	color: #009c63!important;
+}
+.selectArrow {
+	background:url(../img/Icons/Profile/arrow.png) ;
+	background-position:calc(95%);
+  	-webkit-appearance: none;
+	background-repeat: no-repeat;
+}
+
+.selectArrow:focus {
+	background:url(../img/Icons/Profile/arrow.png) ;
+	background-position:calc(95%);
+  	-webkit-appearance: none;
+	background-repeat: no-repeat;
+}
+.hiddenPFirst, .hiddenPSecond, .compareHideTableFirst, .compareHideTableSecond{
+	display: none;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.detailsCompair:nth-child(2) {
+    	width: 39%!important;
+	}
+	.addCar .detailsCompair img {
+    	margin-left: 4px!important;
+	}
+	.addCar .selectedVariant {
+	    margin-top: 26.5%!important;
+	}
+	.variantDiv .chartsPart {
+    	padding-top: 4%!important;
+	}
+	.detailsCompair .selectedVariant {
+    	margin-top: 25%;
+	}
+	.chartsPart table>tbody>tr>td{
+		padding: 10px 0!important;
+	}
+	.chartsPart .detailsCompair  table tr td i{
+		padding: 3px 0!important;
+	}
+	.variantDiv h5{
+		margin-left: 2%!important;
+	}
+	.table>tbody:first-child>tr>th{
+		text-align: center;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.detailsCompair:nth-child(2) {
+    	width: 31%!important;
+	}
+	.chartsPart p{
+		text-align: center!important;
+		margin-bottom: 5%;
+	}
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+		text-align: center!important;
+	}
+	.selectedVariant, .addCar .selectedVariant{
+		margin-top: 5%!important;
+	}
+	.lightLogo>.navbar-brand{
+		padding: 5px 15px!important;
+	} 
+	.chartsPart table tr th:nth-child(2), .chartsPart table tr th:nth-child(3){
+		width: 35%!important;
+		text-align: left!important;
+	}
+	.chartsPart table tr th:nth-child(1){
+		width: 34%!important;
+		text-align: left!important;
+	}
+	.chartsPart table tr td{
+		text-align: left!important;
+	}
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.addCar .detailsCompair img {
+    	margin-left: 13px!important;
+	}
+	.chartsPart table tr th:nth-child(2), .chartsPart table tr th:nth-child(3){
+		width: 35%!important;
+		text-align: left!important;
+	}
+	.chartsPart table tr th:nth-child(1){
+		width: 26%!important;
+		text-align: left!important;
+	}
+	.chartsPart table tr td{
+		text-align: left!important;
+	}
+}
